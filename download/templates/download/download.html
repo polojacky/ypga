@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}
+    <title>TODYP - Download</title>
+{% endblock %}
+
+{% block content %}
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'download/download.css' %}"/>
+    <script src='/static/download/download.js'></script>
+
+    <div class="main">
+        <div class="downloadAll">
+            <ol class="breadcrumb">
+                <li><a href={% url 'ypga.views.index' %}>Home</a></li>
+                <li><a href="{% url 'download:download' %}">Download</a></li>
+                <li class="active">DownloadAll</li>
+            </ol>
+
+            <div class="downloadAllContent">
+                <form action="{% url 'download:gencsv' %}" method="post" role="form"
+                      name="downloadForm"> {% csrf_token %}
+
+                </form>
+                <a href={% url 'download:download' %} target="_blank">Here</a> you can find a more detailed description of
+                the fields.
+            </div>
+        </div>
+    </div>
+{% endblock %}

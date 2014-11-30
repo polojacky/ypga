@@ -1,0 +1,249 @@
+{% extends "base.html" %}
+{% load pagination_tags %}
+
+{% block title %}
+    <title>TODYP - Browse</title>
+{% endblock %}
+
+{% block content %}
+    {% load staticfiles %}
+    {% load getDict %}
+    <link rel="stylesheet" type="text/css" href="{% static 'browse/browse.css' %}"/>
+
+    <div class="main">
+
+    <ol class="breadcrumb">
+        <li><a href="{% url 'ypga.views.index' %}">Home</a></li>
+        <li><a href="{% url 'browse:index' %}">Browse</a></li>
+        <li class="active">sRNA Details</li>
+    </ol>
+
+    <div class="geneMain">
+
+    <div class="panel panel-default">
+    <div class="panel-heading">sRNA <b>{{ id }}</b> Information</div>
+    <div class="panel-body">
+    {% for res in srnaResult %}
+    <div id="srna" class="details">
+
+    <div class="row" id="longRow">
+        <div class="col-md-3">
+            <label>id:</label>
+        </div>
+        <div class="col-md-9" id="longText">
+            {{ res.id }}
+        </div>
+    </div>
+
+    <div class="row" id="longRow">
+        <div class="col-md-3">
+            <label>idSrna:</label>
+        </div>
+        <div class="col-md-9" id="longText">
+
+            {{ res.idsrna }}
+        </div>
+    </div>
+
+    <div class="row" id="longRow">
+        <div class="col-md-3">
+            <label>name:</label>
+        </div>
+        <div class="col-md-9" id="longText">
+
+            {{ res.name }}
+        </div>
+    </div>
+
+    <div class="row" id="longRow">
+        <div class="col-md-3">
+            <label>genomeRefNo:</label>
+        </div>
+        <div class="col-md-9" id="longText">
+
+            <a href="http://www.ncbi.nlm.nih.gov/genome/?term={{ res.genomerefno }}"
+               target="_blank">{{ res.genomerefno }}</a>
+        </div>
+    </div>
+
+    <div class="row" id="longRow">
+        <div class="col-md-3">
+            <label>genomeLocation:</label>
+        </div>
+        <div class="col-md-9" id="longText">
+            {{ res.genomelocation }}
+        </div>
+    </div>
+
+    <div class="row" id="longRow">
+        <div class="col-md-3">
+            <label>strain:</label>
+        </div>
+        <div class="col-md-9" id="longText">
+            {{ res.strain }}
+        </div>
+    </div>
+
+    <div class="row" id="longRow">
+        <div class="col-md-3">
+            <label>strand:</label>
+        </div>
+        <div class="col-md-9" id="longText">
+            {{ res.strand }}
+        </div>
+    </div>
+
+    <div class="row" id="longRow">
+        <div class="col-md-3">
+            <label>start:</label>
+        </div>
+        <div class="col-md-9" id="longText">
+            {{ res.start }}
+        </div>
+    </div>
+
+    <div class="row" id="longRow">
+        <div class="col-md-3">
+            <label>end:</label>
+        </div>
+        <div class="col-md-9" id="longText">
+            {{ res.end }}
+        </div>
+    </div>
+
+    <div class="row" id="longRow">
+        <div class="col-md-3">
+            <label>length:</label>
+        </div>
+        <div class="col-md-9" id="longText">
+            {{ res.length }}
+        </div>
+    </div>
+
+    <div class="row" id="longRow">
+        <div class="col-md-3">
+            <label>type:</label>
+        </div>
+        <div class="col-md-9" id="longText">
+            {{ res.type }}
+        </div>
+    </div>
+
+    <div class="row" id="longRow">
+        <div class="col-md-3">
+            <label>annotatedType:</label>
+        </div>
+        <div class="col-md-9" id="longText">
+            {{ res.annotatedtype }}
+        </div>
+    </div>
+
+    <div class="row" id="longRow">
+        <div class="col-md-3">
+            <label>id_Koo:</label>
+        </div>
+        <div class="col-md-9" id="longText">
+            {{ res.id_koo }}
+        </div>
+    </div>
+
+    <div class="row" id="longRow">
+        <div class="col-md-3">
+            <label>samples:</label>
+        </div>
+        <div class="col-md-9" id="longText">
+            {{ res.samples }}
+        </div>
+    </div>
+
+    <div class="row" id="longRow">
+        <div class="col-md-3">
+            <label>BHI_RPKM:</label>
+        </div>
+        <div class="col-md-9" id="longText">
+            {{ res.bhi_rpkm }}
+        </div>
+    </div>
+
+    <div class="row" id="longRow">
+        <div class="col-md-3">
+            <label>TMH_RPKM:</label>
+        </div>
+        <div class="col-md-9" id="longText">
+            {{ res.tmh_rpkm }}
+        </div>
+    </div>
+
+    <div class="row" id="longRow">
+        <div class="col-md-3">
+            <label>Lung_RPKM:</label>
+        </div>
+        <div class="col-md-9" id="longText">
+            {{ res.lung_rpkm }}
+        </div>
+    </div>
+
+    <div class="row" id="longRow">
+        <div class="col-md-3">
+            <label>Spleen_RPKM:</label>
+        </div>
+        <div class="col-md-9" id="longText">
+            {{ res.spleen_rpkm }}
+        </div>
+    </div>
+
+    <div class="row" id="longRow">
+        <div class="col-md-3">
+            <label>antisenseGeneLocus:</label>
+        </div>
+        <div class="col-md-9" id="longText">
+            {{ res.antisensegenelocus }}
+        </div>
+    </div>
+
+    <div class="row" id="longRow">
+        <div class="col-md-3">
+            <label>upstreamGeneLocus:</label>
+        </div>
+        <div class="col-md-9" id="longText">
+            <a href="http://www.ncbi.nlm.nih.gov/gene/?term={{ res.upstreamgenelocus }}"
+               target="_blank">{{ res.upstreamgenelocus }}</a>
+        </div>
+    </div>
+
+    <div class="row" id="longRow">
+        <div class="col-md-3">
+            <label>downstreamGeneLocus:</label>
+        </div>
+        <div class="col-md-9" id="longText">
+            <a href="http://www.ncbi.nlm.nih.gov/gene/?term={{ res.downstreamgenelocus }}"
+               target="_blank">{{ res.downstreamgenelocus }}</a>
+        </div>
+    </div>
+
+    <div class="row" id="longRow">
+        <div class="col-md-3">
+            <label>source:</label>
+        </div>
+        <div class="col-md-9" id="longText">
+            {{ res.source }}
+        </div>
+    </div>
+
+    <div class="row" id="longRow">
+        <div class="col-md-3">
+            <label>other:</label>
+        </div>
+        <div class="col-md-9" id="longText">
+            {{ res.other }}
+        </div>
+    </div>
+
+    </div>
+    {% endfor %}
+    </div>
+    </div>
+    </div>
+    </div>
+
+{% endblock %}

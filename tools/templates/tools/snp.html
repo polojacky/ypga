@@ -1,0 +1,138 @@
+{% extends "base.html" %}
+{% load pagination_tags %}
+
+{% block title %}
+    <title>TODYP - Tools</title>
+{% endblock %}
+
+{% block content %}
+    {% load staticfiles %}
+    {% load tableSort %}
+    {% load getDict %}
+    <link rel="stylesheet" type="text/css" href="{% static 'tools/tools.css' %}"/>
+    <script src="/static/tools/snp.js"></script>
+
+    <div class="main">
+
+        <ol class="breadcrumb">
+            <li><a href="{% url 'ypga.views.index' %}">Home</a></li>
+            <li><a href="{% url 'tools:index' %}">Tools</a></li>
+            <li class="active">SNP Analysis</li>
+        </ol>
+
+        <!-- Modal -->
+        <div class="modal fade" id="snpModal" tabindex="-1" role="dialog" aria-labelledby="snpModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="snpModalLabel">Example Gene List</h4>
+                    </div>
+                    <div class="modal-body">
+                        <label class="exampleLabel">Gene id list</label>
+
+                        <div class="example">
+                            gi|16082691|ref|NC_003131.1|:88-1110<br/>
+                            gi|145597324|ref|NC_009381.1|:4442959-4443981<br/>
+                            gi|145597324|ref|NC_009381.1|:c1400654-1399632<br/>
+                            <span style="color: #8b0000">OR</span><br/>
+                            gi|16082691|ref|NC_003131.1|:88-1110,gi|145597324|ref|NC_009381.1|:4442959-4443981,gi|145597324|ref|NC_009381.1|:c1400654-1399632<br/>
+
+
+                        </div>
+                        <label class="exampleLabel">Gene locus list</label>
+
+                        <div class="example">
+                            YPA_MT0002<br/>
+                            YPA_MT0033<br/>
+                            YPA_MT0034<br/>
+                            <span style="color: #8b0000">OR</span><br>
+                            YPA_MT0002,YPA_MT0033,YPA_MT0034
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">
+                            Close
+                        </button>
+
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+
+        <div class="toolsMain">
+
+            You can provide a gene list or choose specific strains.
+            <form action="/tools/snpResult/" method="get" role="form" name="snpForm" onsubmit="return checkEmpty()">
+                <div class="snp">
+                    <div id="snpTitle">
+                        Gene List
+                    </div>
+                    <hr/>
+
+                    <div id="snpContent">
+                        <div class="des">Input a list of gene id or gene locus, separated by comma. Or one gene per
+                            line.
+                            <a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#snpModal">
+                                example list
+                            </a>
+                        </div>
+                        <div class="geneList">
+                            <textarea class="form-control " id="geneList" name="geneList" rows="10"
+                                      cols="10"
+                                      placeholder="gene separated by comma, or one gene per line"></textarea>
+                        </div>
+                    </div>
+                    <div id='snpTitle'>
+                        Strain List
+                    </div>
+                    <hr/>
+                    <div id="snpContent">
+                        <div><input type="checkbox" id="selectAll" value="selectAll" onclick="selectAllStrain(this)"><b>select
+                            all</b></div>
+                        <table class="strainList">
+                            <tr>
+                                {% for key,value in strainDic.iteritems %}
+                                    <td><input type="checkbox" name="strain"
+                                               id='{{ key }}' value='{{ key }}'
+                                               onclick="stillSelectStrainAll(this);">{{ value }}
+                                    </td>
+                                    {% if forloop.counter|divisibleby:'6' %}
+                                        </tr>
+                                        <tr>
+                                    {% endif %}
+
+                                {% endfor %}
+                                </tr>
+                        </table>
+                    </div>
+
+                </div>
+
+                <div id="selectType">
+                    <label style="font-size: 16px;color: #3477B1"><b>Choose analysis type:</b></label>
+                    <span id="geneDownloadTip"><a href="{% url 'help:browseHelp' %}#snp" target="_blank"><img
+                                src="/static/images/info_20x20.png"></a></span>
+                    <div class="row">
+
+                        <div class="col-xs-3">
+                            <select name="type" class="form-control">
+                                <option value="snp">snp</option>
+                                <option value="allele">allele</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <input type="submit" id="snpAnalysis" value="Analyze" class="btn btn-primary btn-sm">
+            </form>
+
+        </div>
+
+    </div>
+
+{% endblock %}

@@ -1,0 +1,851 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="66bcf610-c827-4f55-aef0-92101dbcc2ba" name="Default" comment="" />
+    <ignored path="ypga.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="ypga" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="82" column="20" selection-start="4316" selection-end="4316" vertical-scroll-proportion="0.40279937" vertical-offset="1545" max-vertical-offset="2992">
+              <folding>
+                <element signature="e#4159#4199#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/about/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="51" selection-start="298" selection-end="305" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="396">
+              <folding>
+                <element signature="e#0#42#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tools/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="60" selection-start="1139" selection-end="1149" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="638">
+              <folding>
+                <element signature="e#0#42#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/index.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="168" column="19" selection-start="2382" selection-end="2382" vertical-scroll-proportion="0.0" vertical-offset="3075" max-vertical-offset="3850">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/tools/templates/tools/intergenicResult.html" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
+        <option value="$PROJECT_DIR$/about/templates/about/statistics.html" />
+        <option value="$PROJECT_DIR$/download/static/download/download.css" />
+        <option value="$PROJECT_DIR$/browse/static/browse/browse.css" />
+        <option value="$PROJECT_DIR$/about/templates/about/contact.html" />
+        <option value="$PROJECT_DIR$/about/static/about/about.css" />
+        <option value="$PROJECT_DIR$/tools/templates/tools/snpResult.html" />
+        <option value="$PROJECT_DIR$/browse/templates/browse/genome.html" />
+        <option value="$PROJECT_DIR$/browse/templates/browse/gene.html" />
+        <option value="$PROJECT_DIR$/browse/templates/browse/srna.html" />
+        <option value="$PROJECT_DIR$/browse/templates/browse/exp.html" />
+        <option value="$PROJECT_DIR$/help/templates/help/indexHelp.html" />
+        <option value="$PROJECT_DIR$/help/static/help/help.css" />
+        <option value="$PROJECT_DIR$/tools/templates/tools/snpIntraResult.html" />
+        <option value="$PROJECT_DIR$/tools/templates/tools/snp.html" />
+        <option value="$PROJECT_DIR$/tools/views.py" />
+        <option value="$PROJECT_DIR$/tools/templates/tools/snpView.html" />
+        <option value="$PROJECT_DIR$/static/base.css" />
+        <option value="$PROJECT_DIR$/news/static/news/news.css" />
+        <option value="$PROJECT_DIR$/tools/templates/tools/homology.html" />
+        <option value="$PROJECT_DIR$/tools/templates/tools/intergenic.html" />
+        <option value="$PROJECT_DIR$/../../chmille4-Scribl/examples/scale.html" />
+        <option value="$PROJECT_DIR$/tools/static/tools/tools.css" />
+        <option value="$PROJECT_DIR$/../../chmille4-Scribl/examples/demos.css" />
+        <option value="$PROJECT_DIR$/../../chmille4-Scribl/examples/simple.html" />
+        <option value="$PROJECT_DIR$/tools/templates/tools/intergenicView.html" />
+        <option value="$PROJECT_DIR$/search/templates/search/gene.html" />
+        <option value="$PROJECT_DIR$/search/templates/search/correspond.html" />
+        <option value="$PROJECT_DIR$/search/templates/search/exp.html" />
+        <option value="$PROJECT_DIR$/search/templates/search/genome.html" />
+        <option value="$PROJECT_DIR$/search/templates/search/protein.html" />
+        <option value="$PROJECT_DIR$/search/templates/search/snp.html" />
+        <option value="$PROJECT_DIR$/search/templates/search/srna.html" />
+        <option value="$PROJECT_DIR$/tools/static/tools/intergenicView.js" />
+        <option value="$PROJECT_DIR$/about/admin.py" />
+        <option value="$PROJECT_DIR$/ypga/wsgi.py" />
+        <option value="D:/lincs/code/drug/result/2/merge.py" />
+        <option value="$PROJECT_DIR$/ypga/settings.py" />
+        <option value="$PROJECT_DIR$/browse/admin.py" />
+        <option value="$PROJECT_DIR$/browse/templates/browse/index.html" />
+        <option value="$PROJECT_DIR$/browse/urls.py" />
+        <option value="$PROJECT_DIR$/browse/views.py" />
+        <option value="$PROJECT_DIR$/browse/templates/browse/geneDetail.html" />
+        <option value="$PROJECT_DIR$/search/views.py" />
+        <option value="$PROJECT_DIR$/search/templates/search/preview.html" />
+        <option value="$PROJECT_DIR$/search/static/search/search.css" />
+        <option value="D:/lincs/code/drug1/preprocess/process.py" />
+        <option value="$PROJECT_DIR$/browse/models.py" />
+        <option value="$PROJECT_DIR$/static/index.css" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ypga" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ypga" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ypga" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ypga" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ypga" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ypga" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ypga" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ypga" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ypga" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ypga" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="browse" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ypga" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ypga" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blast" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ypga" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ypga" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="about" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="options.lastSelected" value="preferences.sourceCode" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="LayoutCode.rearrangeEntriesPython" value="false" />
+    <property name="LayoutCode.rearrangeEntriesDjangoTemplate" value="false" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
+    <property name="LayoutCode.rearrangeEntriesJavaScript" value="false" />
+    <property name="LayoutCode.rearrangeEntriesCSS" value="false" />
+    <property name="FullScreen" value="false" />
+    <property name="LayoutCode.rearrangeEntriesJSON" value="false" />
+    <property name="restartRequiresConfirmation" value="true" />
+    <property name="SearchEverywhereHistory" value="" />
+    <property name="LayoutCode.rearrangeEntriesHTML" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\ypga\project\ypga\templates" />
+      <recent name="D:\ypga\project\ypga\tools\static\tools\scribl" />
+      <recent name="D:\ypga\project\ypga\tools\static\tools" />
+      <recent name="D:\ypga\project\ypga\tools\templates\tools" />
+      <recent name="D:\ypga\project\ypga\browse\templates\browse" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\maoyq\project\ypga\search\static\search" />
+      <recent name="D:\maoyq\project\ypga\search\templates\search" />
+      <recent name="D:\maoyq\project\ypga\search" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Django server.ypga">
+    <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ypga" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="TARGET" value="" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ypga" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="testToRun" value="" />
+      <option name="keywords" value="" />
+      <option name="params" value="" />
+      <option name="USE_PARAM" value="false" />
+      <option name="USE_KEYWORD" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ypga" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ypga" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ypga" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ypga" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ypga" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Attests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ypga" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="ypga" type="Python.DjangoServer" factoryName="Django server">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="ypga.settings" />
+      </envs>
+      <option name="SDK_HOME" value="C:/Anaconda/python.exe" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ypga" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="0.0.0.0" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Django server.ypga" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="66bcf610-c827-4f55-aef0-92101dbcc2ba" name="Default" comment="" />
+      <created>1401151139895</created>
+      <updated>1401151139895</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TodoView" selected-index="0">
+    <todo-panel id="selected-file">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+    <todo-panel id="default-changelist">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25083613" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277592" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27090302" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17625134" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20735785" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20401338" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="3" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/help/templates/help/indexHelp.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="38" selection-start="1129" selection-end="1129" vertical-scroll-proportion="-14.193548" vertical-offset="132" max-vertical-offset="1100" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/help/static/help/help.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="17" selection-start="311" selection-end="311" vertical-scroll-proportion="0.4042208" vertical-offset="191" max-vertical-offset="1892" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/templates/tools/snp.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="123" column="50" selection-start="5503" selection-end="5506" vertical-scroll-proportion="0.5127388" vertical-offset="2384" max-vertical-offset="3146" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/templates/tools/snpIntraResult.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="12" selection-start="2512" selection-end="5394" vertical-scroll-proportion="0.55382216" vertical-offset="877" max-vertical-offset="1518" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/templates/tools/snpView.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="36" selection-start="2380" selection-end="2380" vertical-scroll-proportion="-7.290323" vertical-offset="1314" max-vertical-offset="2002" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/news/templates/news/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="16" selection-start="265" selection-end="265" vertical-scroll-proportion="-5.677419" vertical-offset="66" max-vertical-offset="814" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/news/static/news/news.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="14" selection-start="98" selection-end="98" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1342" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/templates/tools/homology.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="68" selection-start="2428" selection-end="2428" vertical-scroll-proportion="0.33280253" vertical-offset="1001" max-vertical-offset="2332" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/static/tools/scribl/Scribl.1.1.4.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="36" selection-start="7525" selection-end="7525" vertical-scroll-proportion="0.4502924" vertical-offset="0" max-vertical-offset="1672" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/static/tools/intergenic.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="47" selection-start="1803" selection-end="1819" vertical-scroll-proportion="0.47345766" vertical-offset="858" max-vertical-offset="6314" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/templates/tools/intergenic.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="81" selection-start="565" selection-end="572" vertical-scroll-proportion="0.33280253" vertical-offset="121" max-vertical-offset="2772" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/static/tools/scribl/Scribl.1.1.3.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1672" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/static/tools/tools.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="534" column="8" selection-start="7748" selection-end="7748" vertical-scroll-proportion="0.0" vertical-offset="11205" max-vertical-offset="11902" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="532" column="40" selection-start="19391" selection-end="19391" vertical-scroll-proportion="-10.52" vertical-offset="11441" max-vertical-offset="19866" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/base.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="32" selection-start="24" selection-end="39" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7282" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/search/templates/search/srna.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="40" selection-start="2551" selection-end="2551" vertical-scroll-proportion="0.30414745" vertical-offset="1122" max-vertical-offset="2530" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/search/templates/search/snp.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="40" selection-start="2549" selection-end="2549" vertical-scroll-proportion="0.49698794" vertical-offset="990" max-vertical-offset="2552" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/search/templates/search/protein.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="40" selection-start="2560" selection-end="2560" vertical-scroll-proportion="0.39759037" vertical-offset="1056" max-vertical-offset="2530" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/search/templates/search/genome.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="36" selection-start="856" selection-end="856" vertical-scroll-proportion="0.29819277" vertical-offset="396" max-vertical-offset="3410" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/search/templates/search/exp.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="40" selection-start="2564" selection-end="2564" vertical-scroll-proportion="0.40552995" vertical-offset="1056" max-vertical-offset="2530" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/search/templates/search/correspond.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="40" selection-start="2568" selection-end="2568" vertical-scroll-proportion="0.59638554" vertical-offset="924" max-vertical-offset="2574" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/search/templates/search/gene.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="40" selection-start="2650" selection-end="2650" vertical-scroll-proportion="0.4307229" vertical-offset="1056" max-vertical-offset="2442" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/about/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="19" selection-start="374" selection-end="374" vertical-scroll-proportion="0.37931034" vertical-offset="0" max-vertical-offset="1276" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/about/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="41" selection-start="486" selection-end="486" vertical-scroll-proportion="0.44126076" vertical-offset="0" max-vertical-offset="698" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/about/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="33" selection-start="453" selection-end="453" vertical-scroll-proportion="0.44126076" vertical-offset="0" max-vertical-offset="698" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/static/tools/intergenicView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="41" selection-start="1542" selection-end="1542" vertical-scroll-proportion="0.44963503" vertical-offset="924" max-vertical-offset="2442" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/templates/tools/intergenicView.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="31" selection-start="783" selection-end="783" vertical-scroll-proportion="0.3958021" vertical-offset="264" max-vertical-offset="1166" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ypga/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="726" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ypga/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="39" selection-start="410" selection-end="410" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="594" />
+      </provider>
+    </entry>
+    <entry file="file://D:/lincs/code/drug/result/2/merge.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="39" selection-start="467" selection-end="467" vertical-scroll-proportion="0.54789275" vertical-offset="0" max-vertical-offset="522" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ypga/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="166" column="23" selection-start="4186" selection-end="4186" vertical-scroll-proportion="0.37664235" vertical-offset="3372" max-vertical-offset="4334">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/browse/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="123" column="33" selection-start="4118" selection-end="4118" vertical-scroll-proportion="0.0" vertical-offset="2144" max-vertical-offset="2816" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/browse/templates/browse/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="21" selection-start="765" selection-end="765" vertical-scroll-proportion="0.4274571" vertical-offset="342" max-vertical-offset="2596" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/news/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="47" selection-start="321" selection-end="423" vertical-scroll-proportion="0.44974446" vertical-offset="0" max-vertical-offset="587" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/browse/static/browse/srna.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-4.3850083" vertical-offset="2574" max-vertical-offset="3806" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/browse/static/browse/browse.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="14" selection-start="425" selection-end="426" vertical-scroll-proportion="0.2977707" vertical-offset="429" max-vertical-offset="4092" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/browse/templates/browse/gene.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="88" selection-start="2976" selection-end="2976" vertical-scroll-proportion="1.4581994" vertical-offset="545" max-vertical-offset="2442" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/browse/templates/browse/geneDetail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="242" column="21" selection-start="8612" selection-end="8612" vertical-scroll-proportion="0.6453202" vertical-offset="4931" max-vertical-offset="24266" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/browse/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="134" column="56" selection-start="4602" selection-end="4602" vertical-scroll-proportion="0.0" vertical-offset="2640" max-vertical-offset="8646" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/search/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="84" selection-start="976" selection-end="976" vertical-scroll-proportion="0.0" vertical-offset="660" max-vertical-offset="8470" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/search/templates/search/preview.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="18" selection-start="321" selection-end="321" vertical-scroll-proportion="-6.580645" vertical-offset="82" max-vertical-offset="2156" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/search/static/search/search.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="14" selection-start="110" selection-end="110" vertical-scroll-proportion="0.16845329" vertical-offset="0" max-vertical-offset="946" />
+      </provider>
+    </entry>
+    <entry file="file://D:/lincs/code/drug1/preprocess/process.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="12" selection-start="279" selection-end="279" vertical-scroll-proportion="0.35431919" vertical-offset="0" max-vertical-offset="726">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/browse/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="27" selection-start="1776" selection-end="1776" vertical-scroll-proportion="0.92957747" vertical-offset="66" max-vertical-offset="4950">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index_back.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="45" selection-start="1188" selection-end="1203" vertical-scroll-proportion="0.4549483" vertical-offset="264" max-vertical-offset="1804">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ypga/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="652">
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/browse/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="31" selection-start="823" selection-end="829" vertical-scroll-proportion="0.44832605" vertical-offset="0" max-vertical-offset="687">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="168" column="19" selection-start="2382" selection-end="2382" vertical-scroll-proportion="0.0" vertical-offset="3075" max-vertical-offset="3850">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="60" selection-start="1139" selection-end="1149" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="638">
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/about/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="51" selection-start="298" selection-end="305" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="396">
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="82" column="20" selection-start="4316" selection-end="4316" vertical-scroll-proportion="0.40279937" vertical-offset="1545" max-vertical-offset="2992">
+          <folding>
+            <element signature="e#4159#4199#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
+

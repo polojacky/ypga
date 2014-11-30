@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+{% load pagination_tags %}
+
+{% block title %}
+    <title>TODYP - Tools</title>
+{% endblock %}
+
+{% block content %}
+    {% load staticfiles %}
+    {% load tableSort %}
+    {% load getDict %}
+    <link rel="stylesheet" type="text/css" href="{% static 'tools/tools.css' %}"/>
+    <script src="/static/tools/homology.js"></script>
+    <script src='/static/browse/jquery.fileDownload.js'></script>
+
+    <div class="main">
+
+        <ol class="breadcrumb">
+            <li><a href="{% url 'ypga.views.index' %}">Home</a></li>
+            <li><a href="{% url 'tools:index' %}">Tools</a></li>
+            <li class="active">Homology Analysis</li>
+        </ol>
+
+        <!-- Modal -->
+        <div class="modal fade" id="homologyModal" tabindex="-1" role="dialog" aria-labelledby="homologyModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="homologyModalLabel">Example Gene List</h4>
+                    </div>
+                    <div class="modal-body">
+                        <label class="exampleLabel">Gene id list</label>
+
+                        <div class="example">
+                            gi|294501992|ref|NC_014022.1|:64767-65153<br/>
+                            gi|108793732|ref|NC_008118.1|:64765-65151<br/>
+                            gi|31795333|ref|NC_004838.1|:c84490-84104<br/>
+                            <span style="color: #8b0000">OR</span><br/>
+                            gi|294501992|ref|NC_014022.1|:64767-65153,gi|108793732|ref|NC_008118.1|:64765-65151,gi|31795333|ref|NC_004838.1|:c84490-84104<br/>
+
+
+                        </div>
+                        <label class="exampleLabel">Gene locus list</label>
+
+                        <div class="example">
+                            YPZ3_pMT0055<br/>
+                            YPN_MT0064<br/>
+                            Y1102<br/>
+                            <span style="color: #8b0000">OR</span><br>
+                            YPZ3_pMT0055,YPN_MT0064,Y1102
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">
+                            Close
+                        </button>
+
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+
+        <div class="toolsMain">
+
+            Homology analysis exploits the homology of genes in all strains. You can provide a gene list to perform the analysis.
+            <form action="/tools/homologyResult/" method="post" role="form" name="homologyForm" onsubmit="return checkEmpty()">{% csrf_token %}
+                <div class="snp">
+                    <div id="snpTitle">
+                        Gene List
+                    </div>
+                    <hr/>
+
+                    <div id="snpContent">
+                        <div class="des">Input a list of gene id or gene locus, separated by comma. Or one gene per line.
+                            <a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#homologyModal">
+                                example list
+                            </a>
+                        </div>
+                        <div class="geneList">
+                            <textarea class="form-control " id="geneList" name="geneList" rows="10"
+                                      cols="10"
+                                      placeholder="gene separated by comma, or one gene per line"></textarea>
+                        </div>
+                    </div>
+
+
+                </div>
+                <input type="submit" id="snpAnalysis" value="Analyze" class="btn btn-primary btn-sm">
+            </form>
+
+
+        </div>
+
+    </div>
+
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load pagination_tags %}
+
+{% block title %}
+    <title>TODYP - Tools</title>
+{% endblock %}
+
+{% block content %}
+    {% load staticfiles %}
+    {% load tableSort %}
+    {% load getDict %}
+    <link rel="stylesheet" type="text/css" href="{% static 'tools/tools.css' %}"/>
+    <script src="/static/tools/scribl/Scribl.1.1.3.min.js"></script>
+    <script src="/static/tools/intergenicView.js"></script>
+
+    <div class="main">
+
+        <ol class="breadcrumb">
+            <li><a href="{% url 'ypga.views.index' %}">Home</a></li>
+            <li><a href="{% url 'tools:index' %}">Tools</a></li>
+            <li><a href="{% url 'tools:snp' %}">Intergenic Analysis</a></li>
+            <li class="active">View</li>
+        </ol>
+
+        <div class="toolsMain">
+            Intergenic result for <span id="idintergenic">{{ result.idintergenic }}</span>.<br/>
+
+            <div id="idDes">
+                <label>upstreamgeneid:</label>
+                <span id="upstreamgeneid">{{ result.upstreamgeneid }}</span>
+            </div>
+            <div id="idDes">
+                <label>downstreamgeneid:</label>
+                <span id="downstreamgeneid">{{ result.downstreamgeneid }}</span>
+            </div>
+
+            <div id="idDes2"><label>View of Intergenic:</label></div>
+
+            <div id="container">
+                <canvas id="canvas"></canvas>
+                </br><a id="export">Export as PNG (right click Save As)</a>
+            </div>
+
+        </div>
+
+    </div>
+
+{% endblock %}

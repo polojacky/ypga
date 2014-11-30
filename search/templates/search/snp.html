@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+{% load pagination_tags %}
+
+{% block title %}
+    <title>TODYP - Browse</title>
+{% endblock %}
+
+{% block content %}
+    {% load staticfiles %}
+    {% load tableSort %}
+    {% load getDict %}
+    <link rel="stylesheet" type="text/css" href="{% static 'browse/browse.css' %}"/>
+    <script src="/static/search/snp.js"></script>
+    <script src='/static/browse/jquery.fileDownload.js'></script>
+
+    <div class="main">
+
+        <ol class="breadcrumb">
+            <li><a href="{% url 'ypga.views.index' %}">Home</a></li>
+            <li><a href="{% url 'search:preview' %}">Search</a></li>
+            <li class="active">SNP</li>
+        </ol>
+
+        <div class="browseMain">
+
+            <div id="geneSummary">Summary: Query result for "<span id="strain">{{ query }}</span>" contains <span
+                    id="interactions">{{ interactions }}</span> entr{{ interactions|pluralize:'y,ies' }}.
+
+            </div>
+            <div id="functionDiv" class="functionDiv">
+                <div id="selectHint" class="selectHint">
+                    <b><span id="selectNumber">0</span></b> items selected
+                </div>
+                <input type="checkbox" id="selectAllPage" value="selectAllPage" onclick="selectAllPage(this);">
+                <label id="selectAllPage"> Select all records </label>
+
+                        <span id="buttonGroup">
+                            <button id="downloadFunc" class="btn btn-primary btn-sm"
+                                    onclick="performFunction('download');">Download
+                            </button>
+
+                        </span>
+                        <span id="geneDownloadTip"><a href="{% url 'help:browseHelp' %}#srna" target="_blank"><img
+                                src="/static/images/info_20x20.png"></a></span>
+
+            </div>
+            <div id="preparing-file-modal" title="Preparing report..." style="display: none;">
+                We are preparing your file, please wait...
+
+                <div class="ui-progressbar-value ui-corner-left ui-corner-right"
+                     style="width: 100%; height:22px; margin-top: 20px;"></div>
+            </div>
+
+            <div id="error-modal" title="Error" style="display: none;">
+                There was a problem generating your file, please try again.
+            </div>
+
+            {% if result %}
+                <table class="table table-hover table-striped table-bordered table-condensed" id="geneTable">
+                    <thead>
+                    <tr class="tableHead">
+                        <th id="tableSelectAll">
+                            <input type="checkbox" id="selectCurrentPage" value="selectCurrentPage"
+                                   onclick="selectCurrentPage(this)">
+                        </th>
+                        <th name="id"><a href="?{% url_replace request 'order_by' 'id' %}">ID</a></th>
+                        <th name="id1"><a href="?{% url_replace request 'order_by' 'id1' %}">id1</a></th>
+                        <th name="id2"><a href="?{% url_replace request 'order_by' 'id2' %}">id2</a>
+                        </th>
+                        <th name="snpposlist"><a
+                                href="?{% url_replace request 'order_by' 'snpposlist' %}">snpposlist</a></th>
+                        <th name="source"><a
+                                href="?{% url_replace request 'order_by' 'source' %}">source</a>
+                        </th>
+                        <th name="other"><a
+                                href="?{% url_replace request 'order_by' 'other' %}">other</a>
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% autopaginate result %}
+                    {% for item in result %}
+                        <tr>
+                            <td id="tableSelect">
+                                <input type="checkbox" name="tableRowCheckBox"
+                                       id={{ item.id }} value={{ item.id }}
+                                       onclick="stillSelectAll(this);">
+                            </td>
+                            <td>{{ item.id }}
+                            </td>
+                            <td>{{ item.id1 }}</td>
+                            <td>{{ item.id2 }}</td>
+                            <td>{{ item.snpposlist }}</td>
+                            <td>{{ item.source }}</td>
+                            <td>{{ item.other }}</td>
+
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+                <div id="pager">{% paginate %}</div>
+            {% else %}
+                <p>No results.</p>
+            {% endif %}
+
+
+        </div>
+
+    </div>
+
+{% endblock %}

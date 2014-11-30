@@ -1,0 +1,150 @@
+{% extends "base.html" %}
+{% load pagination_tags %}
+
+
+{% block title %}
+    <title>TODYP - Browse</title>
+{% endblock %}
+
+{% block content %}
+    {% load staticfiles %}
+    {% load tableSort %}
+    {% load getDict %}
+    <link rel="stylesheet" type="text/css" href="{% static 'browse/browse.css' %}"/>
+    <script src="/static/browse/browse.js"></script>
+
+    <div class="main">
+
+        <ol class="breadcrumb">
+            <li><a href="{% url 'ypga.views.index' %}">Home</a></li>
+            <li><a href="{% url 'search:preview' %}">Search</a></li>
+            <li class="active">Genome</li>
+        </ol>
+
+        <div class="browseMain">
+            <p id="strain">Search result for "{{ query }}"</p>
+            <table class="table table-hover table-striped table-bordered table-condensed">
+                <thead>
+                <tr class="tableHead">
+                    <th>NCBI ref no</th>
+                    <th>Type</th>
+                    <th>Genome Name</th>
+                    <th>Length(bp)</th>
+                    <th>Gene Number</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for item in result %}
+                    <tr>
+                        <td><a href="/browse/genome/{{ strain }}#{{ item.genomerefno }}">{{ item.genomerefno }}</a></td>
+                        <td>{{ item.genometype }}</td>
+                        <td>{{ item.genomename }}</td>
+                        <td>{{ item.length }}</td>
+                        <td>{{ item.genenum }}</td>
+
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+
+
+            <div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion"
+                               href="#collapseOne">
+                                <b>Chromosome Details</b>
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            {% for item in result %}
+                                <div class="genomeDetail" id="{{ item.genomerefno }}">
+                                    <div id="title">#{{ forloop.counter }}: {{ item.genomerefno }}</div>
+                                    <label>genomeRefNo:</label>
+
+                                    <span id="genenmeDetail">{{ item.genomerefno }}</span> <br/>
+                                    <label>genomeType:</label>
+
+                                    <span id="genenmeDetail">{{ item.genometype }}</span> <br/>
+                                    <label>geneNum:</label>
+
+                                    <span id="genenmeDetail">{{ item.genenum }}</span> <br/>
+                                    <label>giNo:</label>
+
+                                    <span id="genenmeDetail">{{ item.gino }}</span> <br/>
+                                    <label>uidNo:</label>
+
+                                    <span id="genenmeDetail">{{ item.uidno }}</span> <br/>
+                                    <label>genomeName:</label>
+
+                                    <span id="genenmeDetail">{{ item.genomename }}</span> <br/>
+                                    <label>definition:</label>
+
+                                    <span id="genenmeDetail">{{ item.definition }}</span> <br/>
+                                    <label>seq:</label>
+
+                                    <span id="genenmeDetail"></span> <br/>
+                                    <label>length:</label>
+
+                                    <span id="genenmeDetail">{{ item.length }}</span> <br/>
+                                    <label>source:</label>
+
+                                    <span id="genenmeDetail">{{ item.source }}</span> <br/>
+                                    <label>type:</label>
+
+                                    <span id="genenmeDetail">{{ item.type }}</span> <br/>
+                                    <label>biovar:</label>
+
+                                    <span id="genenmeDetail">{{ item.biovar }}</span> <br/>
+                                    <label>strain:</label>
+
+                                    <span id="genenmeDetail">{{ item.strain }}</span> <br/>
+                                    <label>updateTime:</label>
+
+                                    <span id="genenmeDetail">{{ item.updatetime }}</span> <br/>
+
+                                    <div class="panel-group" id="accordion{{ forloop.counter }}">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a data-toggle="collapse" data-toggle="collapse"
+                                                       data-parent="#accordion{{ forloop.counter }}"
+                                                       href="#collapse{{ forloop.counter }}">
+                                                        <b>Reference</b>
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapse{{ forloop.counter }}" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <label>reference:</label><br/>
+                                                    {% for ref in publicationDict|get:item.genomerefno %}
+                                                        {{ forloop.counter }}. <span id="genenmeDetail">{{ ref }}</span>
+                                                        <br/>
+                                                        <br/>
+                                                    {% endfor %}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="gotop">
+            <a href="#" title="Back to the top of the page"><span
+                    class="glyphicon glyphicon-circle-arrow-up"></span>
+                Top</a>
+        </div>
+
+    </div>
+
+{% endblock %}

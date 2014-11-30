@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block title %}
+    <title>TODYP - Tools</title>
+{% endblock %}
+
+{% block content %}
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'tools/tools.css' %}"/>
+
+    <div class="main">
+        <ol class="breadcrumb">
+            <li><a href="{% url 'ypga.views.index' %}">Home</a></li>
+            <li class="active">Tools</li>
+        </ol>
+
+        <div class="toolsIndex">
+
+            <div style="margin-top: 20px;font-size: 18px;font-weight: bold">Diversity Analysis Tools</div>
+            <div class="analysisType">
+                <a href="{% url 'tools:snp' %}">SNP Analysis</a>
+            </div>
+            <div class="analysisDes">
+                <ul>
+                    <li>
+                        SNP analysis
+                    </li>
+                </ul>
+            </div>
+
+            <div style="margin-top: 20px;font-size: 18px;font-weight: bold">Homology Analysis Tools</div>
+            <div class="analysisType">
+                <a href="{% url 'tools:intergenic' %}">Intergenic Analysis</a>
+            </div>
+            <div class="analysisDes">
+                <ul>
+                    <li>
+                        Intergenic analysis
+                    </li>
+                </ul>
+            </div>
+
+            <div class="analysisType">
+                <a href="{% url 'tools:homology' %}">Homology Analysis</a>
+            </div>
+            <div class="analysisDes">
+                <ul>
+                    <li>
+                        Homology analysis
+                    </li>
+                </ul>
+            </div>
+
+            <div class="analysisType">
+                <a href="{% url 'tools:blastIndex' %}">BLAST Analysis</a>
+            </div>
+            <div class="analysisDes">
+                <ul>
+                    <li>
+                        BLAST analysis
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}

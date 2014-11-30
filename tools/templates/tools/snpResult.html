@@ -1,0 +1,180 @@
+{% extends "base.html" %}
+{% load pagination_tags %}
+
+{% block title %}
+    <title>TODYP - Tools</title>
+{% endblock %}
+
+{% block content %}
+    {% load staticfiles %}
+    {% load tableSort %}
+    {% load getDict %}
+    <link rel="stylesheet" type="text/css" href="{% static 'tools/tools.css' %}"/>
+    <script src="/static/tools/snp.js"></script>
+    <script src='/static/browse/jquery.fileDownload.js'></script>
+
+    <div class="main">
+
+        <ol class="breadcrumb">
+            <li><a href="{% url 'ypga.views.index' %}">Home</a></li>
+            <li><a href="{% url 'tools:index' %}">Tools</a></li>
+            <li><a href="{% url 'tools:snp' %}">SNP Analysis</a></li>
+            <li class="active">Result</li>
+        </ol>
+        <!-- Modal -->
+        <div class="modal fade" id="filterModal" tabindex="-1" role="dialog" aria-labelledby="filterModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"
+                                aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="filterModalLabel">Filter Result</h4>
+                    </div>
+                    <div class="modal-body">
+
+                        {% if strain %}
+                            <div class="strainList">
+                                <div class="checkboxAll">
+                                    <label class="checkbox-inline"><input type="checkbox" id="selectAll"
+                                                                          value="All"
+                                                                          onclick="selectAllStrain(this)"><b>Select
+                                        All</b></label>
+
+                                    <table class="checkTable">
+                                        <tr>
+                                            {% for key,value in strain.iteritems %}
+
+                                                <td><label class="checkbox-inline"><input type="checkbox"
+                                                                                          name="strain"
+                                                                                          id="strain"
+                                                                                          value="{{ key }}"
+                                                                                          onclick="stillSelectStrainAll(this);"> {{ value }}
+                                                </label></td>
+                                                {% if forloop.counter|divisibleby:4 %}
+                                                    </tr>
+                                                    <tr>
+                                                {% endif %}
+
+                                            {% endfor %}
+                                            </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        {% endif %}
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal"
+                                onclick="filterTable(this);">Filter
+                        </button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+
+
+        <div class="toolsMain">
+
+            <div id="geneSummary">Summary: Query result contains <span
+                    id="interactions">{{ interactions }}</span> entr{{ interactions|pluralize:'y,ies' }},
+                <span>{{ strainSelectedNumber }}</span> strain{{ strainSelectedNumber|pluralize }} ({{ strainSelected }}).
+                You can filter the result by strain.
+            </div>
+            <div id="functionDiv" class="functionDiv">
+                <div id="selectHint" class="selectHint">
+                    <b><span id="selectNumber">0</span></b> items selected
+                </div>
+                <input type="checkbox" id="selectAllPage" value="selectAllPage" onclick="selectAllPage(this);">
+                <label id="selectAllPage"> Select all records </label>
+
+                        <span id="buttonGroup">
+                            <button id="downloadFunc" class="btn btn-primary btn-sm"
+                                    onclick="performFunction('download');">Download
+                            </button>
+
+                        </span>
+                        <span id="geneDownloadTip"><a href="{% url 'help:browseHelp' %}#snp" target="_blank"><img
+                                src="/static/images/info_20x20.png"></a></span>
+                <button id="filter" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#filterModal">
+                    Filter
+                </button>
+            </div>
+            <div id="preparing-file-modal" title="Preparing report..." style="display: none;">
+                We are preparing your file, please wait...
+
+                <div class="ui-progressbar-value ui-corner-left ui-corner-right"
+                     style="width: 100%; height:22px; margin-top: 20px;"></div>
+            </div>
+
+            <div id="error-modal" title="Error" style="display: none;">
+                There was a problem generating your file, please try again.
+            </div>
+
+            <span id="ids" style="display:none">{{ ids }}</span>
+
+            <div id="csrf" style="display:none" value="{% csrf_token %}"></div>
+
+            {% if result %}
+                <table class="table table-hover table-striped table-bordered table-condensed" id="geneTable">
+                    <thead>
+                    <tr class="tableHead">
+                        <th id="tableSelectAll">
+                            <input type="checkbox" id="selectCurrentPage" value="selectCurrentPage"
+                                   onclick="selectCurrentPage(this)">
+                        </th>
+                        <th name="id"><a href="?{% url_replace request 'order_by' 'id' %}">ID</a></th>
+                        <th name="id1"><a href="?{% url_replace request 'order_by' 'id1' %}">id1</a></th>
+                        <th name="strain1"><a href="?{% url_replace request 'order_by' 'strain1' %}">strain1</a></th>
+                        <th name="id2"><a href="?{% url_replace request 'order_by' 'id2' %}">id2</a>
+                        <th name="strain2"><a href="?{% url_replace request 'order_by' 'strain2' %}">strain2</a></th>
+                        </th>
+                        <th name="snpposlist"><a
+                                href="?{% url_replace request 'order_by' 'snpposlist' %}">snpposlist</a></th>
+                        <th name="listnum"><a
+                                href="?{% url_replace request 'order_by' 'listnum' %}">listnum</a>
+                        </th>
+                        <th name="source"><a
+                                href="?{% url_replace request 'order_by' 'source' %}">source</a>
+                        </th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% autopaginate result %}
+                    {% for item in result %}
+                        <tr>
+                            <td id="tableSelect">
+                                <input type="checkbox" name="tableRowCheckBox"
+                                       id={{ item.id }} value={{ item.id }}
+                                       onclick="stillSelectAll(this);">
+                            </td>
+                            <td><a href="{% url 'tools:snpView' item.id %}" title="View in graph"
+                                   target="_blank">{{ item.id }}</a>
+                            </td>
+                            <td>{{ item.id1 }}</td>
+                            <td>{{ item.strain1 }}</td>
+                            <td>{{ item.id2 }}</td>
+                            <td>{{ item.strain1 }}</td>
+                            <td>{{ item.snpposlist }}</td>
+                            <td>{{ item.listnum }}</td>
+                            <td>{{ item.source }}</td>
+
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+                <div id="pager">{% paginate %}</div>
+            {% else %}
+                <p>No results.</p>
+            {% endif %}
+
+
+        </div>
+
+    </div>
+
+{% endblock %}

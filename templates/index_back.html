@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% block title %}
+    <title>TODYP - Trans-Omics Database of Yersinia Pestis</title>
+{% endblock %}
+
+{% block content %}
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'index.css' %}"/>
+    <script src='/static/index.js'></script>
+
+    <div class="row" id="index_row">
+        <div class="col-md-9" id="index_col_9">
+            <div class="main">
+
+                <div class="intro">
+                    <div class="welcome">Welcome to TODYP!</div>
+                    <p>这里是项目介绍：<br/>
+
+                        欢迎来到鼠疫菌跨组学平台!
+                        鼠疫杆菌（Yersinia
+                        pestis）属于耶尔森氏菌属(Yersina)。它是引起烈性传染病鼠疫(Plague)的病原菌，同时也是帝国主义和霸权主义者使用的致死性细菌战剂之一。曾在欧洲引起大规模疾病死亡，在二战中也有使用记录。
+
+                        鼠疫杆菌为短小的革兰氏阳性球杆菌，新分离株以美兰或姬姆萨染色，显示两端浓染，有荚膜（或称封套）。在病灶标本中及初代培养时，呈卵园形。在液体培养基中生长呈短链排列。需氧及兼性厌氧菌，最适温度为27-28℃，初次分离需在培养基中加入动物血液，亚硫酸钠等以促进生长，在血平板上，28℃培养48小时后，长成不透明的，中央隆起，不溶血，边缘呈花边样菌落，这种菌落形态为本菌的特征。在液体培养基中24小时孵育逐渐形成絮状沉淀，48小时在液表面形成薄菌膜，从菌膜向管底生长出垂状菌丝，呈钟乳石状。
+
+                        鼠疫菌跨组学平台的数据来自公开数据库、公开发表的文献、及我们自己实验所得，包括鼠疫菌DNA、RNA、蛋白质、调控、表型等各方面的相关数据，同时我们还提供一些在线分析工具。
+                    </p>
+                    <img src="/static/images/index1.png">
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="col-md-3" id="index_col_3">
+            <div id="rightPart">
+                <div class="news">
+                    <h3><a href="{% url 'news:index' %}">News</a></h3>
+                    <hr/>
+                    <ul class="news-ul">
+                        {% for newItem in news %}
+                            <li><a href='{% url 'news:index' %}#{{ forloop.counter }}'>{{ newItem.title }}
+                                ({{ newItem.time | date:'d M, Y' }})</a></li>
+                        {% endfor %}
+                        {% ifequal mark 1 %}
+                            <div class="mark"><a href="{% url 'news:index' %}">more &gt;</a></div>
+                        {% endifequal %}
+
+                    </ul>
+
+
+                </div>
+
+
+                <div class="contact">
+                    <h3>Contact</h3>
+                    <hr/>
+                    <div class="contactDes">If you have any questions, please <a href="{% url 'about:contact' %}"
+                                                                                 target="_blank">contact</a> us!
+                    </div>
+
+                </div>
+
+                <div class="contact">
+                    <h3>Statistics</h3>
+                    <hr/>
+                    <ul class="news-ul">
+                        <li>TODY currently holds xx data.</li>
+
+                    </ul>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+{% endblock %}

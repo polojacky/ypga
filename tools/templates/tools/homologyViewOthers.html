@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load pagination_tags %}
+
+{% block title %}
+    <title>TODYP - Tools</title>
+{% endblock %}
+
+{% block content %}
+    {% load staticfiles %}
+    {% load tableSort %}
+    {% load getDict %}
+    <link rel="stylesheet" type="text/css" href="{% static 'tools/tools.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'tools/infovis/ForceDirected.css' %}"/>
+    <!--[if IE]><script src='/static/analysis/infovis/excanvas.js'></script><![endif]-->
+    <script src='/static/tools/infovis/jit.js'></script>
+    <script src='/static/tools/infovis/network.js'></script>
+    <script src='/static/csrf.js'></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css"/>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js'></script>
+
+    <div class="main" style="background-color: #FDFDFD" id="main">
+
+        <div id="geneList" style="display:none">{{ geneList }}</div>
+
+        <div class="toolsMain">
+            <div id="otherLoading">
+                <img src="/static/tools/images/loading6.gif"/>
+            </div>
+        </div>
+
+    </div>
+
+    <script type="text/javascript" language="JavaScript">
+        $(document).ready(function () {
+            var text = $('#geneList').text();
+            //change to ajax post to avoid too long url
+            $.post("/tools/homologyViewNetwork/", {'text': text, csrfmiddlewaretoken: '{{csrfmiddlewaretoken}}'}, evalCallbk);  //get search types from server
+        });
+    </script>
+
+{% endblock %}

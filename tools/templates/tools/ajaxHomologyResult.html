@@ -1,0 +1,57 @@
+{% load pagination_tags %}
+{% load staticfiles %}
+{% load tableSort %}
+
+{% if result %}
+    <table class="table table-hover table-striped table-bordered table-condensed" id="geneTable">
+        <thead>
+        <tr class="success">
+            <th id="tableSelectAll">
+                <input type="checkbox" id="selectCurrentPage" value="selectCurrentPage"
+                       onclick="selectCurrentPage(this)">
+            </th>
+            <th name="id"><a href="?{% url_replace request 'order_by' 'id' %}">ID</a></th>
+            <th name="strain"><a href="?{% url_replace request 'order_by' 'strain' %}">Strain</a></th>
+            <th name="type"><a href="?{% url_replace request 'order_by' 'type' %}">type</a></th>
+            <th name="coreidentitythreshold"><a
+                    href="?{% url_replace request 'order_by' 'coreidentitythreshold' %}">coreidentitythreshold</a>
+            </th>
+            <th name="corecoveragethreshold"><a
+                    href="?{% url_replace request 'order_by' 'corecoveragethreshold' %}">corecoveragethreshold</a>
+            </th>
+            <th name="listnum"><a
+                    href="?{% url_replace request 'order_by' 'listnum' %}">listnum</a>
+            </th>
+            <th name="source"><a
+                    href="?{% url_replace request 'order_by' 'source' %}">source</a>
+            </th>
+
+        </tr>
+        </thead>
+        <tbody id="tbody">
+        {% autopaginate result %}
+        {% for item in result %}
+            <tr>
+                <td id="tableSelect">
+                    <input type="checkbox" name="tableRowCheckBox"
+                           id={{ item.id }} value={{ item.id }}
+                           onclick="stillSelectAll(this);">
+                </td>
+
+                <td>{{ item.id }}
+                </td>
+                <td>{{ item.strain }}</td>
+                <td>{{ item.type }}</td>
+                <td>{{ item.coreidentitythreshold }}</td>
+                <td>{{ item.corecoveragethreshold }}</td>
+                <td id="listnum_{{ item.id }}">{{ item.listnum }}</td>
+                <td>{{ item.source }}</td>
+
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <div id="pager">{% paginate %}</div>
+{% else %}
+    <p>No results.</p>
+{% endif %}

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}
+    <title>TODYP - Tools</title>
+{% endblock %}
+
+{% block content %}
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'tools/tools.css' %}"/>
+
+    <div class="main">
+        <ol class="breadcrumb">
+            <li><a href="{% url 'ypga.views.index' %}">Home</a></li>
+            <li><a href="{% url 'tools:index' %}">Tools</a></li>
+            <li class="active">BLAST Result</li>
+        </ol>
+
+        <div class="blastIndex">
+            <div class="jobId">
+                <b>JOB ID:</b>
+                <span id="jobId">{{ jobId }}</span>
+            </div>
+
+            <div class="msg">
+                {{ msg | safe }}
+            </div>
+
+
+        </div>
+    </div>
+{% endblock %}

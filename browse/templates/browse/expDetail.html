@@ -1,0 +1,321 @@
+{% extends "base.html" %}
+{% load pagination_tags %}
+
+{% block title %}
+    <title>TODYP - Browse</title>
+{% endblock %}
+
+{% block content %}
+    {% load staticfiles %}
+    {% load getDict %}
+    <link rel="stylesheet" type="text/css" href="{% static 'browse/browse.css' %}"/>
+
+    <div class="main">
+
+    <ol class="breadcrumb">
+        <li><a href="{% url 'ypga.views.index' %}">Home</a></li>
+        <li><a href="{% url 'browse:index' %}">Browse</a></li>
+        <li class="active">Expression Profile Details</li>
+    </ol>
+
+    <div class="geneMain">
+
+    <div class="panel panel-default">
+    <div class="panel-heading">Expression Profile <b>{{ id }}</b> Information</div>
+    <div class="panel-body">
+    {% for res in expResult %}
+        <div id="exp" class="details">
+
+
+        <div class="row" id="longRow">
+            <div class="col-md-4">
+                <label>locus:</label>
+            </div>
+            <div class="col-md-8" id="longText">
+                <a href="http://www.ncbi.nlm.nih.gov/gene/?term={{ res.locus }}" target="_blank">{{ res.locus }}</a>
+            </div>
+        </div>
+
+        <div class="row" id="longRow">
+            <div class="col-md-4">
+                <label>genomeRefNo:</label>
+            </div>
+            <div class="col-md-8" id="longText">
+
+                <a href="http://www.ncbi.nlm.nih.gov/genome/?term={{ res.genomerefno }}"
+                   target="_blank">{{ res.genomerefno }}</a>
+            </div>
+        </div>
+
+        <div class="row" id="longRow">
+            <div class="col-md-4">
+                <label>geneName:</label>
+            </div>
+            <div class="col-md-8" id="longText">
+
+                {{ res.genename }}
+            </div>
+        </div>
+
+        <div class="row" id="longRow">
+            <div class="col-md-4">
+                <label>classNum:</label>
+            </div>
+            <div class="col-md-8" id="longText">
+
+                {{ res.classnum }}
+            </div>
+        </div>
+
+        <div class="row" id="longRow">
+            <div class="col-md-4">
+                <label>37_vs_26celsius:</label>
+            </div>
+            <div class="col-md-8" id="longText">
+                {{ res.number_37_vs_26celsius }}
+            </div>
+        </div>
+
+        <div class="row" id="longRow">
+            <div class="col-md-4">
+                <label>cold_shock:</label>
+            </div>
+            <div class="col-md-8" id="longText">
+
+                <div>{{ res.cold_shock }}</div>
+            </div>
+        </div>
+
+        <div class="row" id="longRow">
+            <div class="col-md-4">
+                <label>heat_shock:</label>
+            </div>
+            <div class="col-md-8" id="longText">
+                {{ res.heat_shock }}
+            </div>
+        </div>
+
+        <div class="row" id="longRow">
+            <div class="col-md-4">
+                <label>high_salt:</label>
+            </div>
+            <div class="col-md-8" id="longText">
+                {{ res.high_salt }}
+            </div>
+        </div>
+
+        <div class="row" id="longRow">
+            <div class="col-md-4">
+                <label>high_osmolarity:</label>
+            </div>
+            <div class="col-md-8" id="longText">
+                {{ res.high_osmolarity }}
+            </div>
+        </div>
+
+        <div class="row" id="longRow">
+            <div class="col-md-4">
+                <label>ompr_mutant_hs:</label>
+            </div>
+            <div class="col-md-8" id="longText">
+                {{ res.ompr_mutant_hs }}
+            </div>
+        </div>
+
+        <div class="row" id="longRow">
+            <div class="col-md-4">
+                <label>ompr_mutant_ho:</label>
+            </div>
+            <div class="col-md-8" id="longText">
+                {{ res.ompr_mutant_ho }}
+            </div>
+        </div>
+
+        <div class="row" id="longRow">
+            <div class="col-md-4">
+                <label>h2o2:</label>
+            </div>
+            <div class="col-md-8" id="longText">
+                {{ res.h2o2 }}
+            </div>
+        </div>
+
+        <div class="row" id="longRow">
+            <div class="col-md-4">
+                <label>oxyr:</label>
+            </div>
+            <div class="col-md-8" id="longText">
+                {{ res.oxyr }}
+            </div>
+        </div>
+
+        <div class="row" id="longRow">
+            <div class="col-md-4">
+                <label>ph5point5:</label>
+            </div>
+            <div class="col-md-8" id="longText">
+                {{ res.ph5point5 }}
+            </div>
+        </div>
+
+        <div class="row" id="longRow">
+            <div class="col-md-4">
+                <label>phop_ph5point5:</label>
+            </div>
+            <div class="col-md-8" id="longText">
+                {{ res.phop_ph5point5 }}
+            </div>
+        </div>
+
+        <div class="row" id="longRow">
+            <div class="col-md-4">
+                <label>fur_26celsius:</label>
+            </div>
+            <div class="col-md-8" id="longText">
+                {{ res.fur_26celsius }}
+            </div>
+        </div>
+
+        <div class="row" id="longRow">
+            <div class="col-md-4">
+                <label>fur_37celsius:</label>
+            </div>
+            <div class="col-md-8" id="longText">
+                {{ res.fur_37celsius }}
+            </div>
+        </div>
+
+        <div class="row" id="longRow">
+            <div class="col-md-4">
+                <label>fe2_26temp:</label>
+            </div>
+            <div class="col-md-8" id="longText">
+                {{ res.fe2_26temp }}
+            </div>
+        </div>
+
+        <div class="row" id="longRow">
+            <div class="col-md-4">
+                <label>fe2_37celsius:</label>
+            </div>
+            <div class="col-md-8" id="longText">
+                {{ res.fe2_37celsius }}
+            </div>
+        </div>
+
+        <div class="row" id="longRow">
+            <div class="col-md-4">
+                <label>low_mg2:</label>
+            </div>
+            <div class="col-md-8" id="longText">
+                {{ res.low_mg2 }}
+            </div>
+        </div>
+
+        <div class="row" id="longRow">
+            <div class="col-md-4">
+                <label>phop_mg2:</label>
+            </div>
+            <div class="col-md-8" id="longText">
+                {{ res.phop_mg2 }}
+            </div>
+        </div>
+
+        <div class="row" id="longRow">
+            <div class="col-md-4">
+                <label>chloromycetin:</label>
+            </div>
+            <div class="col-md-8" id="longText">
+                {{ res.chloromycetin }}
+            </div>
+        </div>
+
+        <div class="row" id="longRow">
+            <div class="col-md-4">
+                <label>tetracycline:</label>
+            </div>
+            <div class="col-md-8" id="longText">
+                {{ res.tetracycline }}
+            </div>
+        </div>
+
+        <div class="row" id="longRow">
+            <div class="col-md-4">
+                <label>streptomycin:</label>
+            </div>
+            <div class="col-md-8" id="longText">
+                {{ res.streptomycin }}
+            </div>
+        </div>
+
+        <div class="row" id="longRow">
+            <div class="col-md-4">
+                <label>exponential_vs_stationary_phase_bhi:</label>
+            </div>
+            <div class="col-md-8" id="longText">
+                {{ res.exponential_vs_stationary_phase_bhi }}
+            </div>
+        </div>
+
+        <div class="row" id="longRow">
+            <div class="col-md-4">
+                <label>exponential_vs_stationary_tmh:</label>
+            </div>
+            <div class="col-md-8" id="longText">
+                {{ res.exponential_vs_stationary_tmh }}
+            </div>
+        </div>
+
+        <div class="row" id="longRow">
+            <div class="col-md-4">
+                <label>tmh_vs_bhi_exponential_phase:</label>
+            </div>
+            <div class="col-md-8" id="longText">
+                {{ res.tmh_vs_bhi_exponential_phase }}
+            </div>
+        </div>
+
+        <div class="row" id="longRow">
+            <div class="col-md-4">
+                <label>tmh_vs_bhi_stationary_phase:</label>
+            </div>
+            <div class="col-md-8" id="longText">
+                {{ res.tmh_vs_bhi_stationary_phase }}
+            </div>
+        </div>
+
+        <div class="row" id="longRow">
+            <div class="col-md-4">
+                <label>antibacterial_peptides:</label>
+            </div>
+            <div class="col-md-8" id="longText">
+                {{ res.antibacterial_peptides }}
+            </div>
+        </div>
+
+        <div class="row" id="longRow">
+            <div class="col-md-4">
+                <label>source:</label>
+            </div>
+            <div class="col-md-8" id="longText">
+                {{ res.source }}
+            </div>
+        </div>
+
+        <div class="row" id="longRow">
+            <div class="col-md-4">
+                <label>other:</label>
+            </div>
+            <div class="col-md-8" id="longText">
+                {{ res.other }}
+            </div>
+        </div>
+
+        </div>
+    {% endfor %}
+    </div>
+    </div>
+    </div>
+    </div>
+
+{% endblock %}

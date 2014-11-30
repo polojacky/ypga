@@ -1,0 +1,167 @@
+{% extends "base.html" %}
+{% block title %}
+    <title>TODYP - Help</title>
+{% endblock %}
+
+{% block content %}
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'help/help.css' %}"/>
+    <script src='/static/help/help.js'></script>
+
+    <div class="helpMain">
+        <div class="row">
+            <div class="col-md-3 leftNav">
+                <div id="header">
+                    <h3><b>Quick help links</b></h3>
+                </div>
+                <hr>
+                <ul class="nav nav-pills nav-stacked">
+                    <li><a href="{% url 'help:index' %}">Overview</a></li>
+                    <li><a href="{% url 'help:ehfHelp' %}">Background</a></li>
+                    <li><a href="{% url 'help:searchHelp' %}">Search</a></li>
+                    <li><a href="{% url 'help:browseHelp' %}">Browse</a></li>
+                    <li><a href="{% url 'help:analysisHelp' %}">Analysis</a></li>
+                    <ul>
+                        <li><a href="#gea">GEA Analysis</a></li>
+                        <li><a href="#network">EHF-pathogen Network</a></li>
+                        <li><a href="#heatmapAnalysis">EHF overlap analysis</a></li>
+                        <li><a href="#vtp">VTP Analysis</a></li>
+                    </ul>
+                    <li><a href="{% url 'help:restHelp' %}">RESTful API</a></li>
+                    <li><a href="{% url 'help:citeHelp' %}">Cite</a></li>
+                </ul>
+            </div>
+            <div class="col-md-9 rightContent">
+                <div class="title" id="gea"><a href="#">GEA Analysis</a></div>
+                <div class="content">
+                    EHFPI provides direct links to <a href="http://david.abcc.ncifcrf.gov/" target="_blank">DAVID</a> to
+                    perform gene enrichment analysis. You can choose the EHF genes of a specific pathogen or from a
+                    screen reported by a specific publication to run the analysis. In the filter window, the number mark
+                    at the end of each guidance item represents the total number of EHFPI accessions under this
+                    statistical category. Please note that the size of filter window is adjustable.
+                    <div><img src="/static/help/images/gea1.jpg"></div>
+                    We provide GO and KEGG pathway analysis by default. For more details, please refer to DAVID help.
+                    Please note that DAVID API has limitations on the total number of genes for submission!
+
+                </div>
+
+                <div class="gotop">
+                    <a href="#" title="Back to the top of the page"><span
+                            class="glyphicon glyphicon-circle-arrow-up"></span>
+                        Top</a>
+                </div>
+
+                <div class="title" id="network"><a href="#">EHF-pathogen Network</a></div>
+                <div class="content">
+                    A network representation of the EHF genes and pathogens is provided based on the custom gene list.
+                    You can provide gene symbols in three ways:
+                    <ul>
+                        <li>EHFPI guidance tree</li>
+                        <li>Input a gene list</li>
+                        Genes should be separated by comma, e.g., cab5,cbx4, or one gene per line.
+                        <li>Upload a text file</li>
+                        text file, gene separated by comma e.g., cab5,cbx4. Or one gene per line.
+                    </ul>
+                    <div><img src="/static/help/images/network1.jpg"></div>
+                    Please note that it may take minutes to load the network if you submit too large amount of genes.
+                    In the EHF-pathogen network, dots represent genes and stars represent pathogens. An edge connecting
+                    a gene and a pathogen represents this gene is an EHF of this pathogen. The edges are differentially
+                    colored according the phenotypes. Below is an example figure of EHF-Brucella abortus(Brucella
+                    melitensis) netwrok.
+                    <div><img src="/static/help/images/network2.jpg"></div>
+                    The left top window is a result display, showing all the pathogen(s) that share(s) the designated
+                    gene(s) as EHF(s) and corresponding numbers. <br/>
+                    The following operations are supported in the network window:
+                    <ul>
+                        <li><b>
+                            Filter the result.</b>
+                        </li>
+                        You can select one or several pathogen species in the result display window. The corresponding
+                        nodes (stars and dots) will be highlighted.
+                        <li><b>Mouse over a node's label to select a node and its connections.</b></li>
+                        The edges connected to the selected node will be highlighted. If you point at a gene (dot), the
+                        label will display its full name, and its related pathogen information will be shown in the left
+                        bottom window. If you point at a pathogen(star), the label will display strains/subtypes of the
+                        pathogen, and the characteristics of its EHF genes (common/specific) will be summarized and
+                        shown in the left bottom window.
+
+                        <li><b>click on the 'x' link to delete a node.</b></li>
+                        You can hide the pathogen node by clicking the 'x' link, if the gene node connected to this node
+                        is specific (means only connected to one pathogen node), the node will hide too.
+                        <li><b>Drag nodes around.</b></li>
+                        You can drag the node to the place you want in the window for better view.
+                        <li><b>Zoom and pan the figure.</b></li>
+                        You can zoom the figure with mouse wheel, or use the 'zoom in' and 'zoom out' button on the
+                        right top of network window. You can also pan the graph.
+                        <li><b>Search the network.</b></li>
+                        You can search gene symbol(s) or pathogen(s) in the network. When an exact match is found, the
+                        corresponding nodes will be highlighted.
+                        <li><b>Save the network as an image.</b></li>
+                        Only visible filed of the network window is saved.
+
+                    </ul>
+                    Please note that single nodes may not be placed in the visible scope of the network window. You can
+                    zoom in to see all nodes.
+
+                </div>
+
+                <div class="title" id="heatmapAnalysis"><a href="#">EHF overlap analysis</a></div>
+                A EHF overlap analysis displays the common EHF genes of pathogens in a heatmap representation. You can
+                run the analysis in two aspects:
+                <ul>
+                    <li>Taxonomy</li>
+                    Common EHF genes of pathogen(s) will be custom displayed at four different taxonomy levels (i.e.
+                    kingdom, family, specie, and strain). Please note that for viral pathogens, the analysis at genus
+                    level is not provided, and for fungal and bacteria l pathogens, the analysis at family level is not
+                    provided.
+                    <li>Article</li>
+                    Common EHF genes for a specific will be custom displayed based on the published articles that
+                    reports the RNAi screen results pathogen. To distinguish different pathogen species tested in one
+                    article, we further add pathogen information to the guidance tree.
+                </ul>
+                <div><img src="/static/help/images/heatmap2.jpg"></div>
+                <br/>
+
+                Below is an example of EHF overlap analysis result using taxonomy. In the heatmap, squares are
+                differentially colored according to the number of shared EHF genes for a pair of pathogens (names shall
+                be notified with mouse arrow placed on the square). And the exact number is placed in the center of each
+                square, with the detailed information displayed in the left bottom window as in a 'Common Genes' list.
+                This window can be moved in the page at your convenience.
+
+                <div class="content">
+                    <div><img src="/static/help/images/heatmap1.jpg"></div>
+                </div>
+
+                By default, the result is generated and ordered by name at kingdom level. You can
+                also change the dominant display order. Now, EHFPI supports three orders:
+                <ul>
+                    <li>name</li>
+                    <li>common gene number</li>
+                    <li>pathogen group</li>
+                    e.g., species of the same family.
+                </ul>
+
+                Clicking the square to see the corresponding result page. See <a
+                    href="{% url 'help:searchHelp' %}">search</a> for more help.
+                Please note that the size of guidance tree window is adjustable and supports search for further
+                information.
+
+                <div class="title" id="vtp"><a href="#">VTP Analysis</a></div>
+                <div class="content">
+                    VTP analysis provides information on whether or not the protein product of an EHF gene is
+                    experimentally validated as a virus targeting protein. The VTP data are from <a
+                        href="http://pbildb1.univ-lyon1.fr/virhostnet/index.php" target="_blank">VirHostNet</a>.
+                    You can provide a gene list or choose EHF genes of specific pathogen(s) to view the analysis result.
+                    <div><img src="/static/help/images/vtp1.jpg"></div>
+                    <div><img src="/static/help/images/vtp11.jpg"></div>
+                    The result page includes a summary of the analysis and a list of brief information regarding the
+                    EHFs whose protein products are also VTPs. You can see the detailed information by clicking the
+                    VirHostNet external link.
+                    <div><img src="/static/help/images/vtp2.jpg"></div>
+                    You can also download VTP analysis data or perform GEA and network analysis based on the result.
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

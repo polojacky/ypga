@@ -1,0 +1,149 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    <script src='/static/versionDetect.js'></script>
+    <!-- 最新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+    <!-- 可选的Bootstrap主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="http://cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="http://cdn.bootcss.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+    <link rel="shortcut icon" href="/static/images/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'base.css' %}"/>
+    {#    <script src='/static/jquery-ui-1.10.4/jquery-ui-1.10.4.min.js'></script>#}
+    {##}
+    {#    <link rel="stylesheet" type="text/css" href="{% static 'jquery-ui-1.10.4/jquery-ui-1.10.4.min.css' %}"/>#}
+
+    <script src='/static/base.js'></script>
+    <script src='/static/jquery.clearsearch.js'></script>
+
+    <!-- 可选的Bootstrap主题文件（一般不用引入） -->
+    {#    <link rel="stylesheet" href="http://cdn.jsdelivr.net/qtip2/2.2.0/jquery.qtip.min.css">#}
+    {#    <script src="http://cdn.jsdelivr.net/qtip2/2.2.0/jquery.qtip.min.js"></script>#}
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
+        <script src="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+
+    {% block title %}
+    {% endblock %}
+</head>
+<body>
+<div class="container">
+    <div class="top">
+
+        <div id="logo">
+            <div id="top-logo-title">Trans-omics Database of Yersinia Pestis</div>
+            <div class="search">
+                <!-- search form-->
+                <form action="/search/preview/" method="get" role="form" name="searchForm">
+                    <input name="query" class="query" id="focusedInpu" type="text" placeholder="Search everything">
+                    <button type="submit" class="btn btn-default btn-sm"><span
+                            class="glyphicon glyphicon-search"></span>
+                        Search
+                    </button>
+                </form>
+            </div>
+
+            <div id="top-des"><a href="{% url 'about:statistics' %}" target="_blank">statistics</a> | <a
+                    href="{% url 'help:index' %}" target="_blank">Help</a>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-default " role="navigation">
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li id="home"><a href="{% url 'ypga.views.index' %}"><span class="glyphicon glyphicon-home"></span> Home</a>
+                </li>
+
+                <li id="search" class="dropdown">
+                    <a class="dropdown-toggle"><span
+                            class="glyphicon glyphicon-search"></span> Search<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/">Quick Search</a></li>
+                        <li><a href="">Advanced</a></li>
+                    </ul>
+                </li>
+
+                <li id="browse"><a href="{% url 'browse:index' %}"><span class="glyphicon glyphicon-list"></span> Browse</a>
+                </li>
+
+                <li id="tools" class="dropdown">
+                    <a href="{% url 'tools:index' %}" class="dropdown-toggle"><span
+                            class="glyphicon glyphicon-wrench"></span> Tools<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+
+                        <li><a href="{% url 'tools:snp' %}" title="SNP Analysis">SNP Analysis</a></li>
+                        <li><a href="{% url 'tools:intergenic' %}" title="Intergenic Analysis">Intergenic Analysis</a>
+                        </li>
+                        <li><a href="{% url 'tools:homology' %}" title="Homology Analysis">Homology Analysis</a></li>
+                        <li><a href="{% url 'tools:blastIndex' %}" title="BLAST Analysis">BLAST</a></li>
+                    </ul>
+                </li>
+
+                <li id="download" class="dropdown">
+                    <a class="dropdown-toggle"><span
+                            class="glyphicon glyphicon-download"></span> Downloads<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{% url 'download:download' %}">Custom Downloads</a></li>
+                        <li><a href="">REST Service</a></li>
+                    </ul>
+                </li>
+
+                <li id="about" class="dropdown">
+                    <a href="{% url 'about:index' %}" class="dropdown-toggle"><span
+                            class="glyphicon glyphicon-info-sign"></span> About<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{% url 'about:statistics' %}">Statistics</a></li>
+                        <li><a href="{% url 'about:submit' %}">Submit</a></li>
+                        <li><a href="{% url 'about:copyright' %}">Copyright</a></li>
+                        <li><a href="{% url 'about:external' %}">External Links</a></li>
+                        <li><a href="{% url 'about:lab' %}">Our Lab</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+
+
+            <ul class="nav navbar-nav navbar-right nav-admin">
+                <li><a href="/admin/"><span class="glyphicon glyphicon-user"></span> Admin</a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </nav>
+
+
+    <noscript>
+        <div style="padding-left:8px;margin-bottom:10px;font-weight:bold;color:#FF0000;font-size:16px">
+            This browser is either not Javascript enabled or has it turned off.<br/>
+            This site will not function correctly without Javascript, please turn it on!
+        </div>
+    </noscript>
+
+    {% block content %}
+
+    {% endblock %}
+
+    <div class="footer">
+        Trans-omics of Yersinia pestis is supported by a Bio-computing Center of LAM.<br/>
+        Copyright &copy; 2014-2015 Yersinia cross-omics platform, Beijing, China
+    </div>
+
+</div>
+
+
+</body>
+</html>

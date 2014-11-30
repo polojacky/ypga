@@ -1,0 +1,536 @@
+/*blast*/
+.main {
+    border: 1px solid;
+    border-radius: 5px;
+    background-color: white;
+    padding: 30px 50px 40px 50px;
+    min-height: 700px;
+}
+
+#queryTip {
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+fieldset #queryFileLabel {
+    margin-top: 20px;
+}
+
+fieldset {
+    margin-bottom: 20px;
+}
+
+fieldset legend {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+label {
+    font-weight: normal;
+}
+
+#accordion {
+    margin: 0px 0px 0px 0px;
+}
+
+.ui-widget {
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Helvetica, Verdana, Tahoma, sans-serif;
+}
+
+.ui-accordion-header {
+    border: 1px solid grey;
+    background: none;
+    background-color: #F5F5F5;
+}
+
+.ui-accordion-content {
+    background: none;
+    margin-bottom: 20px;
+}
+
+.ui-accordion-content .content {
+    padding: 10px 20px 10px 20px;
+}
+
+.ui-accordion-content .content ul {
+    padding-left: 25px;
+}
+
+.ui-accordion-content a:link {
+    color: #4299D8;
+}
+
+.ui-accordion-content a:visited {
+    color: #EB8F00;
+}
+
+#submitAll {
+    margin-top: 20px;
+    margin-left: 0px !important;
+}
+
+#clearSeq {
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+
+#generalParm div {
+    margin-bottom: 10px;
+}
+
+.jobId {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#jobId {
+    color: #8b0000;
+}
+
+.blastTitle {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.blastContent {
+    margin-bottom: 30px;
+}
+
+#focusedInput {
+    height: 30px;
+    width: 200px;
+    padding: 6px 12px;
+    font-size: 14px;
+    color: #555;
+    background-color: #FFF;
+    background-image: none;
+    border: 1px solid #CCC;
+    border-radius: 4px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+}
+
+#loading img {
+    text-align: center;
+}
+
+.msg {
+    margin-top: 10px;
+}
+
+/*snp*/
+
+.toolsMain {
+    min-height: 600px;
+    padding-left: 10px;
+    padding-right: 10px;
+    word-break: break-all;
+}
+
+.snp hr {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.snp #snpTitle {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#snpContent .des {
+    margin-bottom: 10px !important;
+}
+
+#snpContent input {
+    margin-right: 5px;
+}
+
+#snpContent td {
+    padding-right: 30px;
+}
+
+.example {
+    word-break: break-all;
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+
+.exampleLabel {
+    font-weight: bold;
+}
+
+#snpAnalysis {
+    margin-top: 20px;
+    margin-left: 0px;
+}
+
+#geneTable th[name] {
+    background-image: url(/static/images/up_down.gif);
+    background-repeat: no-repeat;
+    background-position: center left;
+    cursor: pointer;
+}
+
+#geneTable th[name] a {
+    margin-left: 15px;
+    display: block;
+    text-decoration: none;
+}
+
+#geneTable td {
+    max-width: 300px;
+}
+
+#geneSummary {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#geneSummary span {
+    color: darkblue;
+    font-weight: bold;
+}
+
+.functionDiv {
+    height: 70px;
+    border: 1px solid grey;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+#buttonGroup {
+    margin-left: 10px;
+}
+
+#buttonGroup .btn {
+    margin-left: 15px;
+}
+
+.selectHint {
+    margin-top: 10px;
+    font-size: 1em;
+    color: #002a80;
+
+}
+
+#geneDownloadTip {
+    margin-left: 10px;
+}
+
+.popover-content {
+    color: #8b0000;
+}
+
+#pager {
+    text-align: right;
+    padding-right: 5px;
+}
+
+#filter {
+    float: right;
+    margin-right: 20px;
+}
+
+.strainList td {
+    padding-right: 20px;
+}
+
+pre {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+#snpviewTitle{
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+#idDes {
+    margin-top: 5px;
+    margin-right: 20px;
+}
+
+#idDes label,#idDes1 label,#idDes2 label{
+    font-weight: bold;
+}
+
+#idDes2 label{
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+#idDes span {
+    color: darkblue;
+}
+#selectType{
+    margin-top: 30px;
+}
+
+/*index*/
+
+.analysisType {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.analysisDes {
+    font-size: 14px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.analysisDes ul {
+    padding-left: 35px;
+}
+
+/*homology*/
+#otherLoading {
+    text-align: center;
+    margin: 0px auto 0px auto;
+}
+
+.left-panel, .center-panel, .right-panel {
+    border: 1px dashed;
+    color: #800080;
+    color: #416D9C;
+    color: #339900;
+    color: #23A4FF;
+    color: #416D9C;
+    color: #EBB056;
+    color: red;
+
+}
+
+.left-panel {
+    padding: 7px;
+    font-size: 13px;
+}
+
+.geneStat, .searchCenter {
+    border: 1px solid #d3d3d3;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.searchCenter {
+    padding-right: 10px;
+}
+
+.geneStat {
+    max-height: 400px;
+    overflow: auto;
+}
+
+.connections {
+    cursor: move;
+}
+
+#inner-detail {
+    border: 1px solid #d3d3d3;
+    height: 200px;
+    overflow: auto;
+    background-color: #eeeeee;
+    list-style: none;
+    padding-left: 10px;
+    padding-top: 5px;
+    font-size: 14px;
+}
+
+#inner-detail ul {
+    padding-left: 20px;
+}
+
+#nodeName {
+    font-size: 16px;
+    color: #8b0000;
+}
+
+hr {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#searchButton {
+    margin-left: 0px !important;
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+}
+
+.left-panel h4 {
+    color: #3B84C3;
+}
+
+.center-panel {
+    background-color: #ffffff;
+    color: #ccc;
+}
+
+.right-panel {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.right-panel h4 {
+    font-size: 16px;
+    margin-bottom: 0px;
+}
+
+.searchInput {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+#log {
+    position: absolute;
+    top: 10px;
+    font-size: 1.0em;
+    font-weight: bold;
+    color: #23A4FF;
+}
+
+#infovis {
+    position: relative;
+    height: 600px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.legend_div {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.customTip {
+    background-color: #EEEEEE;
+    border: 1px dashed;
+    padding-left: 0px;
+    padding-right: 5px;
+}
+
+.customTip ul {
+    margin: 5px 5px 5px 0px;
+    padding-left: 25px;
+}
+
+.customTip li {
+    margin-left: 0px;
+}
+
+/*edge label*/
+.arrow-label {
+    font-size: 12px;
+    color: dodgerblue;
+}
+
+.download {
+    border: 1px solid #d3d3d3;
+    color: black;
+    position: absolute;
+    top: 0px;
+    left: 15px;
+    z-index: 1;
+}
+
+.download:hover {
+    color: cornflowerblue;
+}
+
+#download {
+    font-size: 14px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+#zoomWrapper {
+    width: 250px;
+    position: absolute;
+    font-size: 12px;
+    top: 10px;
+    right: 30px;
+    color: #000000;
+    z-index: 1;
+}
+
+#zoom {
+    width: 100px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#zoomin,#zoomout {
+    padding-top: 0px;
+    padding-bottom: 5px;
+    margin-left: 0px;
+}
+
+.filterByStrain{
+    margin-bottom: 5px;
+}
+
+#filterTitle{
+    font-weight: bold;
+}
+
+#filterContent{
+    margin-bottom: 15px;
+}
+
+#filterContent input {
+    margin-right: 5px;
+}
+
+#filterContent td {
+    padding-right: 30px;
+}
+
+#filterConfirm {
+    margin-left: 0px;
+}
+
+th[name='id'] {
+    max-width: 200px;
+}
+
+/*intergenic*/
+#jstree_intergic{
+    height: 300px;
+    border: 1px solid;
+    overflow: auto;
+
+    margin-left: 0px;
+    padding-left: 0px;
+    border: 1px solid #808080;
+    border-radius: 5px;
+    overflow: auto;
+    z-index: 1;
+
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+#intergenicAnalysis{
+    margin-top: 10px;
+    margin-left: 0px;
+}
+
+#container{
+    margin-top: 10px;
+}
+
+#canvas{
+}

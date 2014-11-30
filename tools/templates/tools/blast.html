@@ -1,0 +1,166 @@
+{% extends "base.html" %}
+{% block title %}
+    <title>TODYP - Tools</title>
+{% endblock %}
+
+{% block content %}
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'tools/tools.css' %}"/>
+    <script src='/static/tools/blast.js'></script>
+
+    <div class="main">
+        <ol class="breadcrumb">
+            <li><a href="{% url 'ypga.views.index' %}">Home</a></li>
+            <li><a href="{% url 'tools:index' %}">Tools</a></li>
+            <li class="active">BLAST</li>
+        </ol>
+
+        <div class="blastIndex">
+            <form method="post" role="form" enctype="multipart/form-data"
+                      action="{% url 'tools:blast' %}">{% csrf_token %}
+
+                <fieldset id="querySeqField">
+                    <legend>Enter Query Sequence</legend>
+                    <label id="querySeqLabel" for="querySeq">1. Enter accession number(s), gi(s), or FASTA
+                        sequence(s)</label>
+                    <span id="queryTip"><a href="" target="_blank"><img
+                            src="/static/images/info_20x20.png"></a></span>
+                    <label id='clearSeq' class="btn btn-sm btn-default" onclick="clearSeq()">clear sequence</label>
+
+                    <div class="row">
+                        <div class="col-xs-7">
+                            {{ form.querySeq.errors }}
+                            {{ form.querySeq }}
+                        </div>
+                    </div>
+
+
+                    <label id="queryFileLabel" for="queryFile"><b>OR</b><br/>2. upload a fasta file</label>
+                    {{ form.queryFile.errors }}
+                    {{ form.queryFile }}
+                </fieldset>
+
+                <fieldset id="searchSetField">
+                    <legend>Choose Search Set</legend>
+                    <label id="databaseLabel" for="database">Database</label>
+                    <span id="queryTip"><a href="" target="_blank"><img
+                            src="/static/images/info_20x20.png"></a></span>
+
+
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <select is="database" name="database" class="form-control">
+                                <option value="genome">All Genome Sequences</option>
+                                <option value="gene">All Gene Sequences</option>
+                                <option value="protein">All Protein Sequences</option>
+                                <option value="draft">All Draft Sequences</option>
+                            </select>
+                        </div>
+                    </div>
+
+                </fieldset>
+
+                <div class="panel-group" id="accordion">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion"
+                                   href="#collapseOne">
+                                    <b style="font-size: 14px">Algorithm parameters</b>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse">
+                            <div class="panel-body">
+
+                                <div>
+
+                                    <fieldset id="generalParm">
+                                        <legend>General Parameters</legend>
+                                        <label for="maxSeq">Number Alignments(Show alignments for this number of database sequences):</label>
+
+                                        <div class="row">
+                                            <div class="col-xs-3">
+                                                <select id="num_alignments" name="num_alignments" class="form-control">
+                                                    <option value="10">10</option>
+                                                    <option value="50">50</option>
+                                                    <option value="100">100</option>
+                                                    <option value="250" selected>250</option>
+                                                    <option value="500">500</option>
+                                                    <option value="1000">1000</option>
+                                                    <option value="50000">5000</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <label for="maxSeq">Number Descriptions(Show one-line descriptions for this number of database sequences):</label>
+
+                                        <div class="row">
+                                            <div class="col-xs-3">
+                                                <select id="num_descriptions" name="num_descriptions" class="form-control">
+                                                    <option value="10">10</option>
+                                                    <option value="50">50</option>
+                                                    <option value="100">100</option>
+                                                    <option value="250">250</option>
+                                                    <option value="500" selected>500</option>
+                                                    <option value="1000">1000</option>
+                                                    <option value="50000">5000</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <label for="maxSeq">Max Target Seqs:</label>
+
+                                        <div class="row">
+                                            <div class="col-xs-3">
+                                                <select id="max_target_seqs" name="max_target_seqs" class="form-control">
+                                                    <option value="10">10</option>
+                                                    <option value="50">50</option>
+                                                    <option value="100">100</option>
+                                                    <option value="250">250</option>
+                                                    <option value="500" selected>500</option>
+                                                    <option value="1000">1000</option>
+                                                    <option value="50000">5000</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <label for="expectThreshold">Expect threshold:</label>
+
+                                        <div class="row">
+                                            <div class="col-xs-3">
+                                                <select id="expect" name="expect" class="form-control">
+                                                    <option value="0.00000001">1e-7</option>
+                                                    <option value="0.000001">1e-5</option>
+                                                    <option value="0.0001">1e-3</option>
+                                                    <option value="0.001">1e-2</option>
+                                                    <option value="1">1</option>
+                                                    <option value="10" selected>10</option>
+                                                    <option value="100">100</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+
+                                        <label for="matrix">Filter:</label>
+
+                                        <div>
+                                            <input type="checkbox" id="filterQuery" name="filterQuery" checked><label style="margin-left: 5px">low complexity</label>
+                                        </div>
+
+                                    </fieldset>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <input type="submit" value="Submit" id="submitAll" class="btn btn-primary btn-sm">
+
+            </form>
+
+
+        </div>
+    </div>
+{% endblock %}

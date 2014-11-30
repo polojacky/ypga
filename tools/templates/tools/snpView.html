@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% load pagination_tags %}
+
+{% block title %}
+    <title>TODYP - Tools</title>
+{% endblock %}
+
+{% block content %}
+    {% load staticfiles %}
+    {% load tableSort %}
+    {% load getDict %}
+    <link rel="stylesheet" type="text/css" href="{% static 'tools/tools.css' %}"/>
+    <script src="/static/tools/snp.js"></script>
+    <script src='/static/browse/jquery.fileDownload.js'></script>
+
+    <div class="main">
+
+        <ol class="breadcrumb">
+            <li><a href="{% url 'ypga.views.index' %}">Home</a></li>
+            <li><a href="{% url 'tools:index' %}">Tools</a></li>
+            <li><a href="{% url 'tools:snp' %}">SNP Analysis</a></li>
+            <li class="active">View</li>
+        </ol>
+
+        <div class="toolsMain">
+            <div id="snpviewTitle">SNP map for id <b>{{ id }}</b>.</div>
+
+            <span id="idDes">
+                <label>id1:</label>
+                <span>{{ result.id1 }}</span>
+            </span>
+            <span id="idDes">
+                <label>id2:</label>
+                <span>{{ result.id2 }}</span>
+            </span>
+
+            <div id="idDes1">
+                <label>snp pos list:</label>
+                <span>{{ result.snpposlist }}</span>
+            </div>
+
+            <div id="idDes2"><label>Map View of SNP:</label></div>
+            <pre>{{ alignments }}</pre>
+
+            <div id="idDes2"><label>Allele Table:</label></div>
+
+            {% if posList|length %}
+                <table class="table table-hover table-striped table-bordered table-condensed" id="geneTable">
+                    <thead>
+                    <tr class="tableHead">
+                        <th>Position</th>
+                        {% for item in posList %}
+                            <th>{{ item }}</th>
+                        {% endfor %}
+
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    <tr>
+                        <td>{{ result.id1 }}</td>
+                        {% for item in posList %}
+                            <td>{{ allele1Dict|get:item }}</td>
+                        {% endfor %}
+                    </tr>
+
+                    <tr>
+                        <td>{{ result.id2 }}</td>
+                        {% for item in posList %}
+                            <td>{{ allele2Dict|get:item }}</td>
+                        {% endfor %}
+                    </tr>
+
+                    </tbody>
+                </table>
+                <div id="pager">{% paginate %}</div>
+            {% else %}
+                <p>No allele information.</p>
+            {% endif %}
+
+
+        </div>
+
+    </div>
+
+{% endblock %}

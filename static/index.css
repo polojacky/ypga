@@ -1,0 +1,170 @@
+#index_row{
+    background-color: white;
+    margin-left: 0px;
+    margin-right: 0px;
+    border:1px solid;
+    border-top: 0px;
+}
+
+.intro {
+    padding: 30px 50px 10px 50px;
+}
+
+.welcome{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.mycarousel {
+    margin: 0px 50px 20px 50px;
+}
+
+/*main section part*/
+.main {
+    border-radius: 5px;
+    min-height: 700px;
+    background-color: white;
+}
+
+
+#index_col_9{
+    padding-right: 5px;
+}
+
+#index_col_3{
+    padding-left: 5px;
+}
+
+#rightPart{
+    border-left: 1px dashed #d3d3d3;
+    margin-top: 40px;
+}
+
+/*news part*/
+.news {
+    margin-bottom: 5px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    background-color: white;
+}
+
+.news h3 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.news ul {
+    margin-left: 0px;
+    margin-right: 5px;
+    padding-left: 20px;
+}
+
+.news li {
+    margin-bottom: 10px;
+}
+
+.mark {
+    text-align: right;
+    margin-right: 30px;
+}
+
+.contact h3{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+hr {
+    margin-top: 6px;
+    margin-bottom: 15px;
+}
+
+.versions,.contact{
+    margin-bottom: 5px;
+    padding: 10px 10px 10px 20px;
+    background-color: white;
+}
+
+.contact ul{
+    padding-left: 20px;
+}
+
+.contactDes{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.versionDetail{
+    color: orangered;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.panel-heading {
+    background-color: red;
+}
+
+.breadcrumb {
+    font-size: 14px;
+    margin: 40px 50px 0px 50px;
+}
+
+/*browser detect*/
+#detectModalLabel {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#detectModalContent {
+    font-size: 16px;
+}
+
+/*update: 20141130*/
+.indexUl{
+    display: block;
+}
+
+.indexUl li {
+	display: inline-table;
+	width: 103px;
+}
+.indexUl figure img {
+	border: 0;
+	/*width: 84px;*/
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+    margin-bottom: 5px;
+}
+.indexUl figcaption {
+	color: #09456f;
+	/*font-family: Arial, sans-serif;*/
+	font-family: "Didact Gothic", Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.groupTitle{
+    background-color: #C3C3C3;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding: 5px 5px 5px 10px;
+    border-radius: 5px;
+}
+
+.analysisItem{
+    margin-bottom: 10px;
+}
+
+.analysisItem a{
+    width: 150px;
+    margin-left: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #376C8D;
+}
+
+a{
+    color: #376C8D;
+}

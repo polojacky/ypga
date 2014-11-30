@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block title %}
+    <title>TODYP - About</title>
+{% endblock %}
+
+{% block content %}
+    {% load staticfiles %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'about/about.css' %}"/>
+
+    <div class="main">
+        <div class="statistics">
+
+            <ol class="breadcrumb">
+                <li><a href="{% url 'ypga.views.index' %}">Home</a></li>
+                <li><a href="{% url 'about:index' %}">About</a></li>
+                <li class="active">Statistics</li>
+            </ol>
+
+            <div class="statisticsIntro">
+                <span class="glyphicon glyphicon-plus"></span>&nbsp;Overview of TODYP data.
+            </div>
+
+            <div class="statisticsMap">
+                <table class="table table-hover table-striped table-bordered">
+                    <thead>
+                    <tr class="success">
+                        <th>Table name</th>
+                        <th>Item number</th>
+                        <th>Source</th>
+                        <th>Notes</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for item in result %}
+                        <tr>
+                            <td>{{ item.tableName }}</td>
+                            <td>{{ item.itemNumber }}</td>
+                            <td>{{ item.source }}</td>
+                            <td>{{ item.notes }}</td>
+
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+
+    </div>
+{% endblock %}

@@ -1,0 +1,38 @@
+/*preview*/
+.main {
+    border: 1px solid;
+    border-radius: 5px;
+    background-color: white;
+    padding: 30px 50px 0px 50px;
+    min-height: 700px;
+}
+
+.breadcrumb{
+    font-size: 1em;
+    margin: 0px 0px 20px 0px;
+}
+
+.searchMain{
+    min-height: 600px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.searchMain span{
+   color: darkblue;
+    font-weight: bold;
+}
+
+.searchMain hr{
+    margin-top: 5px;
+}
+
+.searchMain .previewTitle{
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.searchMain #field{
+    color: darkblue;
+}

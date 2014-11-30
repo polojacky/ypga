@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% block title %}
+    <title>TODYP - Download</title>
+{% endblock %}
+
+{% block content %}
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'download/download.css' %}"/>
+    <div class="main">
+        <div class="customDiv">
+            <ol class="breadcrumb">
+                <li><a href="{% url 'ypga.views.index' %}">Home</a></li>
+                <li class="active">Downloads</li>
+            </ol>
+
+            <div class="customTitle">
+                Download all data
+            </div>
+            <div class="customContent">
+                To download all data provided by TODYP,
+                You need to <a href= {% url 'download:register' %}>register</a> first.
+            </div>
+            <div class="customTitle">
+                Download data of interest
+            </div>
+            <div class="customContent">
+                You can download data directly from search result and browse result. Or you can select the items of
+                interest at the web page of download for all.
+            </div>
+            <div class="customTitle">
+                Database Content
+            </div>
+            <div class="customContent">
+                TODYP contains following data:
+                <table class="table table-striped table-bordered">
+                    <thead>
+                    <tr class="success">
+                        <th>Description</th>
+                        <th>File</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>genome data for all strains</td>
+                        <td><a href="{{ DOWNLOAD_DIR }}/genome.zip">genome.zip</a></td>
+                    </tr>
+                    <tr>
+                        <td>gene data for all strains</td>
+                        <td><a href="{{ DOWNLOAD_DIR }}/gene.zip">gene.zip</a></td>
+                    </tr>
+                    <tr>
+                        <td>protein data for all strains</td>
+                        <td><a href="{{ DOWNLOAD_DIR }}/protein.zip">protein.zip</a></td>
+                    </tr>
+                     <tr>
+                        <td>sRNA data for strain 91001 and KIM</td>
+                        <td><a href="{{ DOWNLOAD_DIR }}/srna.zip">srna.zip</a></td>
+                    </tr>
+                    <tr>
+                        <td>expression profile data for strain 91001 and CO92</td>
+                        <td><a href="{{ DOWNLOAD_DIR }}/exp.zip">exp.zip</a></td>
+                    </tr>
+                    <tr>
+                        <td>snp data for all strains</td>
+                        <td><a href="{{ DOWNLOAD_DIR }}/snp.zip">snp.zip</a></td>
+                    </tr>
+                    <tr>
+                        <td>gene homology data for all strains</td>
+                        <td><a href="{{ DOWNLOAD_DIR }}/homology.zip">homology.zip</a></td>
+                    </tr>
+                    <tr>
+                        <td>gene intergenic for all strains</td>
+                        <td><a href="{{ DOWNLOAD_DIR }}/intergenic.zip">intergenic.zip</a></td>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

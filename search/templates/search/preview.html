@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+{% load pagination_tags %}
+
+{% block title %}
+    <title>TODYP - Browse</title>
+{% endblock %}
+
+{% block content %}
+    {% load staticfiles %}
+    {% load tableSort %}
+    {% load getDict %}
+    <link rel="stylesheet" type="text/css" href="{% static 'search/search.css' %}"/>
+
+    <div class="main">
+
+        <ol class="breadcrumb">
+            <li><a href="{% url 'ypga.views.index' %}">Home</a></li>
+            <li class="active">Search</li>
+        </ol>
+
+        <div class="searchMain">
+            About <span>{{ total }}</span> result{{ total|pluralize }} for query "<span>{{ query }}</span>".
+            <div class="previewTitle">Summary</div>
+            <hr/>
+            <div class="row">
+                <div class="col-md-2" id="field">
+                    <label>Genome:</label>
+                </div>
+                <div class="col-md-1">
+                    {% ifnotequal genomeNum 0 %}
+                        <a href="/search/quick/?type=genome&query={{ query }}">{{ genomeNum }}</a>
+                    {% else %}
+                        {{ genomeNum }}
+                    {% endifnotequal %}
+                </div>
+                <div class="col-md-4">
+                    Genome information
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-2" id="field">
+                    <label>Gene:</label>
+                </div>
+                <div class="col-md-1">
+                    {% ifnotequal geneNum 0 %}
+                        <a href="/search/quick/?type=gene&query={{ query }}">{{ geneNum }}</a>
+                    {% else %}
+                        {{ geneNum }}
+                    {% endifnotequal %}
+                </div>
+                <div class="col-md-4">
+                    Gene information
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-2" id="field">
+                    <label>Protein:</label>
+                </div>
+                <div class="col-md-1">
+                    {% ifnotequal proteinNum 0 %}
+                        <a href="/search/quick/?type=protein&query={{ query }}">{{ proteinNum }}</a>
+                    {% else %}
+                        {{ proteinNum }}
+                    {% endifnotequal %}
+                </div>
+                <div class="col-md-4">
+                    Protein information
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-2" id="field">
+                    <label>Expression Profile:</label>
+                </div>
+                <div class="col-md-1">
+                    {% ifnotequal expNum 0 %}
+                        <a href="/search/quick/?type=exp&query={{ query }}">{{ expNum }}</a>
+                    {% else %}
+                        {{ expNum }}
+                    {% endifnotequal %}
+                </div>
+                <div class="col-md-4">
+                    Expression profile information
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+{% endblock %}

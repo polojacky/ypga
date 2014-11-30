@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}
+    <title>TODYP - Tools</title>
+{% endblock %}
+
+{% block content %}
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'tools/tools.css' %}"/>
+    <script src='/static/tools/blastResult.js'></script>
+
+    <div class="main">
+        <ol class="breadcrumb">
+            <li><a href="{% url 'ypga.views.index' %}">Home</a></li>
+            <li><a href="{% url 'tools:index' %}">Tools</a></li>
+            <li class="active">BLAST Result</li>
+        </ol>
+
+        <div class="blastIndex">
+            Your job has been submitted. The computation time may be variable based on the server load.
+            <div class="jobId">
+                <b>JOB ID:</b>
+                <span id="jobId">{{ jobId }}</span>
+            </div>
+            <p>You can close this page and query your result with the <b>JOB ID</b> later.</p>
+
+            <div id="loading">
+                <img src="/static/tools/images/loading6.gif">
+            </div>
+
+
+        </div>
+    </div>
+{% endblock %}

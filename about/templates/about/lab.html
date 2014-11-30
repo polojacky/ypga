@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}
+    <title>TODYP - About</title>
+{% endblock %}
+
+{% block content %}
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'about/about.css' %}"/>
+    <div class="main">
+        <div class="external">
+            <ol class="breadcrumb">
+                <li><a href={% url 'ypga.views.index' %}>Home</a></li>
+                <li><a href="{% url 'about:index' %}">About</a></li>
+                <li class="active">Lab Introduction</li>
+            </ol>
+            <div class="labContent">
+                A brief introduction of LAM.
+                <div class="labTitle">Faculties and Students</div>
+                <div class="labContent">
+                    <div class="row">
+                        <div id="image" class="col-md-2">
+                            <img src="/static/about/image/1.jpg" width="100" height="100">
+                        </div>
+                        <div id="intro" class="col-md-8">
+                            Yiqing Mao, Phd students, major in bioinformatics.
+                        </div>
+                    </div>
+                </div>
+                <div class="labTitle">Publications</div>
+                <div class="labContent"></div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

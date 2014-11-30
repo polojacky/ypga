@@ -1,0 +1,121 @@
+{% extends "base.html" %}
+{% load pagination_tags %}
+
+{% block title %}
+    <title>TODYP - Tools</title>
+{% endblock %}
+
+{% block content %}
+    {% load staticfiles %}
+    {% load tableSort %}
+    {% load getDict %}
+    <link rel="stylesheet" type="text/css" href="{% static 'tools/tools.css' %}"/>
+    <script src="/static/tools/intergenic.js"></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jstree/3.0.1/jstree.min.js'></script>
+    <link rel="stylesheet" type="text/css"
+          href="http://cdnjs.cloudflare.com/ajax/libs/jstree/3.0.1/themes/default/style.min.css"/>
+
+
+    <div class="main">
+
+        <ol class="breadcrumb">
+            <li><a href="{% url 'ypga.views.index' %}">Home</a></li>
+            <li><a href="{% url 'tools:index' %}">Tools</a></li>
+            <li class="active">Intergenic Analysis</li>
+        </ol>
+
+        <!-- Modal -->
+        <div class="modal fade" id="snpModal" tabindex="-1" role="dialog" aria-labelledby="snpModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="snpModalLabel">Example Gene List</h4>
+                    </div>
+                    <div class="modal-body">
+                        <label class="exampleLabel">Gene id list</label>
+
+                        <div class="example">
+                            gi|16082691|ref|NC_003131.1|:c9887-9429<br/>
+                            gi|16082781|ref|NC_003134.1|:c38593-38084<br/>
+                            gi|16082781|ref|NC_003134.1|:c80985-79777<br/>
+                            <span style="color: #8b0000">OR</span><br/>
+                            gi|16082691|ref|NC_003131.1|:c9887-9429,gi|16082781|ref|NC_003134.1|:c38593-38084,gi|16082781|ref|NC_003134.1|:c80985-79777
+
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">
+                            Close
+                        </button>
+
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+
+        <div id="csrf" style="display:none" value="{% csrf_token %}"></div>
+
+        <div class="toolsMain">
+
+            You can provide a gene list or choose specific genomes to get intergenic genes.
+            <div class="snp">
+                <div id="snpTitle">
+                    Gene List
+                </div>
+                <hr/>
+
+                <div id="snpContent">
+                    <div class="des">Input a list of gene id or gene locus, separated by comma. Or one gene per line.
+                        <a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#snpModal">
+                            example list
+                        </a>
+                    </div>
+                    <div class="geneList">
+                        <textarea class="form-control " id="geneList" name="geneList" rows="10"
+                                  cols="10"
+                                  placeholder="gene separated by comma, or one gene per line"></textarea>
+                    </div>
+                </div>
+
+
+                <div id="snpTitle">
+                    <b>OR</b>
+                    Select Genomes
+                </div>
+                <hr/>
+
+                <div id="jstree_intergic">
+                    <ul>
+                        <li id="all">All Genomes
+                            <ul>
+                                {% for strain,genomeList in strainDic.iteritems %}
+                                    <li data-jstree='{ "type" : "strain" }'
+                                        id="{{ strain }}">{{ strain }}
+                                        <ul>
+                                            {% for genome in genomeList %}
+                                                <li data-jstree='{ "type" : "genome" }'
+                                                    id="{{ genome }}">{{ genome }}</li>
+                                            {% endfor %}
+                                        </ul>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <input type="button" id="intergenicAnalysis" value="Analyze" class="btn btn-primary btn-sm" onclick="getIntergenic();">
+
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

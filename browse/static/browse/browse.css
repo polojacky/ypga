@@ -1,0 +1,181 @@
+/*main section part*/
+.main {
+    border: 1px solid;
+    border-radius: 5px;
+    background-color: white;
+    padding: 30px 50px 0px 50px;
+    min-height: 700px;
+}
+
+.browseMain{
+    min-height: 600px;
+    padding-left: 10px;
+    padding-right: 10px;
+    word-break: break-all;
+}
+
+
+.breadcrumb{
+    font-size: 1em;
+    margin: 0px 0px 20px 0px;
+}
+
+.browseTitle{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+hr{
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.browseContent div{
+    margin-bottom: 20px;
+}
+
+.browseContent a {
+    width: 80px;
+}
+
+/*genome page*/
+.browseMain #strain{
+    font-weight: bold;
+}
+
+.browseMain #accordion .panel-title{
+    font-size: 14px !important;
+    font-weight: normal !important;
+}
+
+.genomeDetail #title{
+    color: red;
+    font-size: 16px;
+}
+
+.genomeDetail{
+    margin-bottom: 10px;
+    word-break:break-all;
+}
+
+.gotop{
+    text-align: right;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    position: fixed;
+    float: right;
+    bottom: 0px;
+}
+
+/*gene page*/
+#pager {
+    text-align: right;
+    padding-right: 5px;
+}
+
+#geneTable th[name] {
+    background-image: url(/static/images/up_down.gif);
+    background-repeat: no-repeat;
+    background-position: center left;
+    cursor: pointer;
+}
+
+#geneTable th[name] a {
+    margin-left: 15px;
+    display: block;
+    text-decoration: none;
+}
+
+#geneTable td {
+    max-width: 350px;
+}
+
+#geneSummary{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#geneSummary span{
+    color: darkblue;
+    font-weight: bold;
+}
+
+.functionDiv {
+    height: 70px;
+    border: 1px solid grey;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+#buttonGroup {
+    margin-left: 10px;
+}
+
+#buttonGroup .btn {
+    margin-left: 15px;
+}
+
+.selectHint {
+    margin-top: 10px;
+    font-size: 1em;
+    color: #002a80;
+
+}
+
+#geneDownloadTip{
+    margin-left: 10px;
+}
+
+.popover-content {
+    color: #8b0000;
+}
+
+/*gene details*/
+.geneMain{
+    min-height: 600px;
+    word-break:break-all;
+}
+
+.geneMain .col-md-2,.geneMain .col-md-3,.geneMain .col-md-4{
+    text-align: right;
+}
+
+#longText{
+    padding-left: 0px !important;
+}
+
+#longRow {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/*srna*/
+#displayBar {
+    text-align: right;
+    margin-right: 0px;
+    margin-bottom: 0px;
+}
+
+#srnaTable{
+    width: 100%;
+}
+
+#leftTd{
+    width: 80%;
+}
+
+#rightTd {
+    vertical-align: bottom;
+}
+
+.checkTable td {
+    padding-right: 20px;
+}
+
+/*exp*/
+
+#expTable{
+    width: 100%;
+}

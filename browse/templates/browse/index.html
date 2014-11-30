@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+{% load pagination_tags %}
+
+
+{% block title %}
+    <title>TODYP - Browse</title>
+{% endblock %}
+
+{% block content %}
+    {% load staticfiles %}
+    {% load tableSort %}
+    <link rel="stylesheet" type="text/css" href="{% static 'browse/browse.css' %}"/>
+    <script src="/static/browse/browse.js"></script>
+
+    <div class="main">
+
+        <ol class="breadcrumb">
+            <li><a href="{% url 'ypga.views.index' %}">Home</a></li>
+            <li class="active">Browse</li>
+        </ol>
+
+        <div class="browseMain">
+            <div class="browseTitle">
+                Genome Data
+            </div>
+            <hr/>
+            <div class="browseContent">
+                <p>genome data for all strains</p>
+                <div>
+                    <a class="btn btn-success btn-sm" href="{% url 'browse:genome' 'CO92' %}" role="button">CO92</a>
+                    <a class="btn btn-success btn-sm" href="{% url 'browse:genome' '91001' %}" role="button">91001</a>
+                    <a class="btn btn-success btn-sm" href="{% url 'browse:genome' 'Nepal516' %}"
+                       role="button">Nepal516</a>
+                    <a class="btn btn-success btn-sm" href="{% url 'browse:genome' 'Angola' %}" role="button">Angola</a>
+                    <a class="btn btn-success btn-sm" href="{% url 'browse:genome' 'Antiqua' %}"
+                       role="button">Antiqua</a>
+                    <a class="btn btn-success btn-sm" href="{% url 'browse:genome' 'KIM' %}" role="button">KIM</a>
+                </div>
+                <div>
+                    <a class="btn btn-success btn-sm" href="{% url 'browse:genome' 'PestoidesF' %}" role="button">Pestoides F</a>
+                    <a class="btn btn-success btn-sm" href="{% url 'browse:genome' 'A1122' %}" role="button">A1122</a>
+                    <a class="btn btn-success btn-sm" href="{% url 'browse:genome' 'Harbin35' %}"
+                       role="button">Harbin35</a>
+                    <a class="btn btn-success btn-sm" href="{% url 'browse:genome' 'D106004' %}"
+                       role="button">D106004</a>
+                    <a class="btn btn-success btn-sm" href="{% url 'browse:genome' 'D182038' %}"
+                       role="button">D182038</a>
+                    <a class="btn btn-success btn-sm" href="{% url 'browse:genome' 'Z176003' %}"
+                       role="button">Z176003</a>
+                </div>
+            </div>
+
+            <div class="browseTitle">
+                <a href="/browse/gene/">Gene Data</a>
+            </div>
+            <hr/>
+            <div class="browseContent">
+                <p>gene data for all strains</p>
+                <div>
+                    <a class="btn btn-info btn-sm" href="{% url 'browse:gene' 'CO92' %}" role="button">CO92</a>
+                    <a class="btn btn-info btn-sm" href="{% url 'browse:gene' '91001' %}" role="button">91001</a>
+                    <a class="btn btn-info btn-sm" href="{% url 'browse:gene' 'Nepal516' %}"
+                       role="button">Nepal516</a>
+                    <a class="btn btn-info btn-sm" href="{% url 'browse:gene' 'Angola' %}" role="button">Angola</a>
+                    <a class="btn btn-info btn-sm" href="{% url 'browse:gene' 'Antiqua' %}"
+                       role="button">Antiqua</a>
+                    <a class="btn btn-info btn-sm" href="{% url 'browse:gene' 'KIM' %}" role="button">KIM</a>
+                </div>
+                <div>
+                    <a class="btn btn-info btn-sm" href="{% url 'browse:gene' 'PestoidesF' %}" role="button">Pestoides F</a>
+                    <a class="btn btn-info btn-sm" href="{% url 'browse:gene' 'A1122' %}" role="button">A1122</a>
+                    <a class="btn btn-info btn-sm" href="{% url 'browse:gene' 'Harbin35' %}"
+                       role="button">Harbin35</a>
+                    <a class="btn btn-info btn-sm" href="{% url 'browse:gene' 'D106004' %}"
+                       role="button">D106004</a>
+                    <a class="btn btn-info btn-sm" href="{% url 'browse:gene' 'D182038' %}"
+                       role="button">D182038</a>
+                    <a class="btn btn-info btn-sm" href="{% url 'browse:gene' 'Z176003' %}"
+                       role="button">Z176003</a>
+                </div>
+            </div>
+
+            <div class="browseTitle">
+                <a href="/browse/srna/">sRNA Data</a>
+            </div>
+            <hr/>
+            <div class="browseContent">
+                <p>sRNA data for all strains</p>
+                <div>
+                    <a class="btn btn-success btn-sm" href="{% url 'browse:srna' '91001' %}" role="button">91001</a>
+                    <a class="btn btn-success btn-sm" href="{% url 'browse:srna' 'KIM' %}" role="button">KIM</a>
+                </div>
+
+            </div>
+
+            <div class="browseTitle">
+                <a href="/browse/exp/">Expression Profile Data</a>
+            </div>
+            <hr/>
+            <div class="browseContent">
+                <p>expression profile data for all strains</p>
+                <div>
+                    <a class="btn btn-info btn-sm" href="{% url 'browse:exp' '91001' %}" role="button">91001</a>
+                    <a class="btn btn-info btn-sm" href="{% url 'browse:exp' 'CO92' %}" role="button">CO92</a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+{% endblock %}

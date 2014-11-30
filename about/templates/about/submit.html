@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% block title %}
+    <title>TODYP - About</title>
+{% endblock %}
+
+{% block content %}
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'about/about.css' %}"/>
+
+    <div class="main">
+        <div class="submitAbout">
+            <ol class="breadcrumb">
+                <li><a href="{% url 'ypga.views.index' %}">Home</a></li>
+                <li><a href="{% url 'about:index' %}">About</a></li>
+                <li class="active">Submit</li>
+            </ol>
+
+            <div class="submitTitle">
+                Has new TODYP data been published?
+            </div>
+            <div class="submitContent">
+                <div class="message">
+                    <ul>
+
+                        <li>You can fill in the form below to notify us (e.g., title, pubmed ID).</li>
+                    </ul>
+
+                </div>
+                <div class="submitForm">
+                    <form method="post" class="form-horizontal" role="form"
+                          action="{% url 'about:submit' %}">{% csrf_token %}
+
+                        <div class="fieldWrapper">
+                            <label for="id_email">Email*:</label><br/>
+                            {{ myForm.email.errors }}
+                            {{ myForm.email }}<span id="hint">(example@example.com)</span>
+                        </div>
+
+                        <div class="fieldWrapper">
+                            <label for="id_name">Name*:</label><br/>
+                            {{ myForm.name.errors }}
+                            {{ myForm.name }}<span id="hint">(John)</span>
+                        </div>
+
+                        <div class="fieldWrapper">
+                            <label for="id_institute">Institute*:</label><br/>
+                            {{ myForm.institute.errors }}
+                            {{ myForm.institute }}<span id="hint">(Academy of Military Medical Sciences)</span>
+                        </div>
+
+                        <div class="fieldWrapper">
+                            <label for="id_content">Content*:</label><br/>
+                            {{ myForm.content.errors }}
+                            {{ myForm.content }}
+                        </div>
+
+                        <input type="submit" value="Submit" class="btn btn-primary btn-sm">
+                    </form>
+                </div>
+
+            </div>
+            <div class="submitTitle">
+                Any other questions？
+            </div>
+            <div class="submitContent">
+                Feel free to <a href= {% url 'about:contact' %}>contact us</a> if you have any other questions.
+            </div>
+        </div>
+    </div>
+{% endblock %}
